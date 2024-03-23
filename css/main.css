@@ -1,0 +1,48 @@
+html,
+body,
+.view {
+    height: 100%;
+}
+
+#mobile-box {
+    width: 360px;
+}
+
+.card {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.card .view {
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card h5 a {
+    color: #0d47a1;
+}
+
+.card h5 a:hover {
+    color: #072f6b;
+}
+
+.audio-progress{
+    height: 2px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.audioProgressHead{
+    position: relative;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: black;
+    margin-top:-5px;
+    cursor: pointer;
+}
+
