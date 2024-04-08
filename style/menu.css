@@ -1,0 +1,195 @@
+.overlay {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding: 2em;
+    background: #c5fb45;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    will-change: transform;
+    font-family: "Saans TRIAL";
+  }
+
+  .menu-copy {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2em;
+  }
+
+  .menu-overlay-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .menu-close p {
+    color: #000;
+    cursor: pointer;
+    font-family: "Saans TRIAL";
+  }
+
+  .menu-logo a {
+    color: #000;
+    cursor: pointer;
+    font-family: "Saans TRIAL";
+  }
+
+  .menu-close-icon {
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    width: 10vw;
+  }
+
+  .menu-close-icon p {
+    font-size: 100px;
+    -webkit-text-stroke: 3px #c5fb45;
+    line-height: 70%;
+    color: #000;
+    font-family: "Saans TRIAL";
+  }
+
+  .overlay-menu {
+    /* position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center; */
+    color: #000000;
+  }
+  
+  .menu-item {
+    /* display: flex;
+    cursor: pointer;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+    width: max-content;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .menu-item-name{
+    position: relative;
+    font-family: "Saans TRIAL";
+  }
+  
+  .menu-item-name a{
+    font-family: "Saans TRIAL";
+  }
+
+  .menu-item p {
+    /* position: relative;
+    text-align: center;
+    font-family: "Canopee";
+    font-size: 15vw;
+    line-height: 80%; */
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 85%;
+    will-change: transform;
+    transition: letter-spacing 0.3s;
+  }
+  
+  .menu-item p:hover {
+    letter-spacing: 0.075em;
+  }
+  
+  /* .menu-item p#active::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #c03f13;
+    width: 0%;
+    height: 12px;
+  } */
+  
+  .menu-item a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .sub-nav {
+    position: absolute;
+    bottom: 5%;
+    /* left: 50%; */
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5em;
+    opacity: 0;
+  }
+  
+  .sub-nav p {
+    font-family: "Canopee";
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  .menu-info {
+    display: flex;
+  }
+  
+  .menu-info-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: "Saans TRIAL";
+  }
+
+  .menu-preview {
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .menu-preview p{
+    color: #000000;
+    font-family: "Saans TRIAL";
+  }
+
+  .menu-info-col a{
+    color: #000000;
+    font-family: "Saans TRIAL";
+  }
+
+  .menu-info-col p{
+    color: #000000;
+    font-family: "Saans TRIAL";
+  }
+  
+  @media (max-width: 900px) {
+    .menu-close-icon {
+      display: none;
+    }
+  
+    .menu-copy {
+      padding-top: 8em;
+    }
+  
+    .menu-item-name a {
+      font-size: 60px;
+    }
+  }

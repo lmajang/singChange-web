@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Saans TRIAL';
+    src: url('../fonts/Saans\ TRIAL/SaansTRIAL-Heavy.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/ITC\ Avant\ Garde\ Std\ Md-normal-700-100.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'MyCustomFont';
+    src: url('../fonts/') format('truetype');
+  }

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cg-savoirfaire-lp</title>
+  <link rel="stylesheet" href="./style/styles.css" />
+  <link rel="stylesheet" href="./style/menu.css" />
+  <link rel="stylesheet" href="./style/font.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
+</head>
+
+<body>
+<div class="site-content">
+  <video autoplay muted loop id="myVideo">
+    <source src="./assets/hero3.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+<div class="l__loader" style="opacity: 1;">
+  <div class="loader__header">
+    <p> Knowing by doing <br> — SavoirFaire© </p>
+    <div class="content-right">
+      <p> Digital &amp; Branding Design <br> Photography &amp; Film Production </p>
+      <p> Founded in 2020 <br> Brooklyn, NY </p>
+    </div>
+  </div>
+  <h1 class="loader__percent">0</h1>
+  <div class="loader__numbers">
+    <div class="preloader__numbers number-one">
+      <span>0</span>
+      <span>2</span>
+      <span>5</span>
+      <span>7</span>
+      <span>9</span>
+    </div>
+    <div class="preloader__numbers number-two">
+      <span>0</span>
+      <span>7</span>
+      <span>9</span>
+      <span>7</span>
+      <span>9</span>
+    </div>
+  </div>
+</div>
+<div class="l__preloader">
+  <img id="preloader__star-white" class="preloader__star" src="./assets/star-white.svg" alt="Star White">
+  <img id="preloader__star-volt" class="preloader__star" src="./assets/star-volt.svg" alt="Star Volt">
+  <img id="preloader__star-black" class="preloader__star" src="./assets/star-black.svg" alt="Star Black">
+</div>
+
+<div class="items-container"></div>
+
+<div class="cursor">
+  <img src="./assets/cursor.svg" alt="" />
+</div>
+<div class="container">
+  <a onclick="this.classList.toggle('active');" class="l__menu">
+    <img class="menu__background" src="./assets/menu_backgroung.svg" alt="Menu White Background">
+    <img class="menu__star" src="./assets/star-black.svg" alt="">
+  </a>
+  <div class="overlay">
+    <div class="menu-overlay-bar">
+      <div class="menu-logo">
+        <a href="/">Codegrid</a>
+      </div>
+      <div class="menu-close">
+        <p onclick="toggleMenu()">Close</p>
+      </div>
+    </div>
+    <div class="menu-close-icon" onclick="toggleMenu()">
+      <p>✕</p>
+    </div>
+    <div class="menu-copy">
+      <div class="overlay-menu">
+        <div class="menu-item">
+          <div class="menu-item-name">
+            <p id="active"><a href="#">HOME</a></p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-name">
+            <p><a href="#">WORK</a></p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-name">
+            <p><a href="#">ABOUT</a></p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-name">
+            <p><a href="#">CONTACT</a></p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-name">
+            <p><a href="#">LAB</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="menu-info">
+        <div class="menu-info-col">
+          <a href="#" onclick="toggleMenu()">X ↗</a>
+          <a href="#">Instagram ↗</a>
+          <a href="#">LinkedIn ↗</a>
+          <a href="#">Behance ↗</a>
+          <a href="#">Dribbble ↗</a>
+        </div>
+        <div class="menu-info-col">
+          <p>info@codegrid.com</p>
+          <p>0923 3984 23</p>
+        </div>
+      </div>
+    </div>
+    <div class="menu-preview">
+      <p>View ShowReel</p>
+    </div>
+  </div>
+  <div class="marquee home__marquee">
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+    <div class="marquee--item">
+      <span class="text__span">Click Anywhere</span>
+      <span class="star__span"><img src="./assets/star-gray.svg"></span>
+    </div>
+  </div>
+  <div class="hero-copy">
+    <h1>Blockspace</h1>
+    <p>a full cycle agency for all digital and creatives.</p>
+  </div>
+</div>
+
+<canvas id="draw"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="./javascript/script.js"></script>
+<script src="./javascript/menu.js"></script>
+<script src="./javascript/home_canva.js"></script>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      // Initialize variables
+      const t = document.querySelector('.l__preloader');
+      const n = document.querySelector('#preloader__star-white');
+      const c = document.querySelector('#preloader__star-volt');
+      const e = document.querySelector('#preloader__star-black');
+      const f = document.querySelector('.loader__header');
+      const g = document.querySelector('.content-right');
+      // Create a timeline
+      const timeline = gsap.timeline({
+        defaults: {
+          ease: 'power4.inOut',
+          duration: 1.5,
+        },
+      });
+      gsap.set(n, {
+          display: 'none',
+          opacity: 0,
+          delay: .8,
+        }),
+        gsap.set(t, {
+          backgroundColor: '#FFF',
+          delay: .8,
+        }),
+        gsap.set(c, {
+          display: 'none',
+          opacity: 0,
+          delay: 1.6,
+        }),
+        gsap.set(t, {
+          backgroundColor: '#cdfd50',
+          delay: 1.6,
+        }),
+        gsap.set(e, {
+          display: 'none',
+          opacity: 0,
+          delay: 2.4,
+        }),
+        gsap.set(t, {
+          backgroundColor: '#000',
+          delay: 2.4,
+        }),
+        gsap.set(f, {
+          opacity: 0,
+          delay: 2.4,
+        }),
+        gsap.set(g, {
+          opacity: 0,
+          delay: 2.4,
+        }),
+        timeline.to(n, {
+          scale: 14,
+        }, 0),
+        timeline.to(c, {
+          scale: 14,
+          delay: .4,
+        }, 0),
+        timeline.to(e, {
+          scale: 14,
+          delay: .8,
+        }, 0),
+        timeline.to(t, {
+          opacity: 0,
+          delay: 1.1,
+          onComplete: () => t.remove(),
+        }, 0),
+        timeline.play();
+    }, 5500);
+    setTimeout(() => {
+      // Create a timeline
+      const timeline = gsap.timeline({
+        defaults: {
+          ease: 'power4.inOut',
+          duration: 1.5,
+        },
+      });
+      timeline.to('.marquee', {
+          opacity: .2,
+          duration: .6,
+          ease: 'Expo.inOut',
+        }),
+        timeline.to('.marquee', {
+          opacity: 1,
+          duration: 1.6,
+          ease: 'Expo.outIn',
+        }),
+        timeline.to('.home__marquee', {
+          opacity: 1,
+        }, 0),
+        timeline.fromTo('.marquee--item', {
+          top: '4rem',
+          opacity: 0,
+        }, {
+          opacity: 1,
+          top: 0,
+          stagger: .03,
+          duration: 2.5,
+          delay: -.6,
+        }, 0),
+        timeline.fromTo('.marquee', {
+          opacity: 0,
+        }, {
+          opacity: 1,
+          duration: 2.5,
+          delay: -.6,
+        }, 0),
+        timeline.to('.l__menu', {
+          opacity: 1,
+          duration: 2.5,
+          delay: 2,
+        }, 0),
+        timeline.fromTo('.hero-copy', {
+          opacity: 0,
+        }, {
+          opacity: 1,
+          stagger: .03,
+          duration: 2.5,
+          delay: 5,
+        }, 0),
+        timeline.play();
+      const marqueeItems = document.querySelectorAll('.marquee--item');
+      const marqueeContainer = document.querySelector('.home__marquee');
+      // 复制轮播项并添加到容器的末尾
+      marqueeItems.forEach(item => {
+        const clone = item.cloneNode(true);
+        marqueeContainer.appendChild(clone);
+      });
+
+      // 计算所有轮播项（包括复制的）的总宽度
+      let totalWidth = 0;
+      marqueeContainer.querySelectorAll('.marquee--item').forEach(item => {
+        totalWidth += item.offsetWidth;
+      });
+
+      // 设置轮播容器的宽度为所有轮播项的总宽度
+      marqueeContainer.style.width = `${totalWidth}px`;
+
+      // 创建滚动动画
+      gsap.to('.marquee--item', {
+        x: () => `-${totalWidth / 2}px`,
+        ease: 'linear',
+        delay: -.6,
+        repeat: -1, // 无限循环
+        duration: 100, // 完成一次滚动的时间（秒）
+      }),
+      gsap.to('.site-content', {
+        opacity: 1,
+      });
+    }, 6900);
+  });
+</script>
+<script>
+  const tl = gsap.timeline({
+    onComplete: () => {
+      // 在动画完成时执行的回调函数
+      tl.to('.l__loader', {
+        opacity: 0,
+        ease: 'power4.inOut',
+      });
+      console.log('动画完成！');
+    },
+    defaults: {
+      ease: 'power4.inOut', // 默认的缓动函数
+    },
+  });
+
+  // 获取 DOM 元素
+  const loaderPercent = document.querySelector('.loader__percent');
+  const loaderNumbers = document.querySelector('.loader__numbers');
+  const numberOneSpans = document.querySelectorAll('.number-one span');
+  const numberTwoSpans = document.querySelectorAll('.number-two span');
+
+  // 设置初始值
+  let percent = 0; // 这里设置初始百分比值
+  // 计算每个数字之间的距离
+  const calculateDistance = () => {
+    const containerWidth = window.innerWidth; // 容器的宽度
+    const spanWidth = numberOneSpans[0].getBoundingClientRect().width; // 单个数字的宽度
+    const spacing = (containerWidth - spanWidth * numberOneSpans.length) / (numberOneSpans.length + 1); // 计算间距
+
+    return spacing;
+  };
+
+  // 使用 calculateDistance 函数来设置数字的位置
+  const setNumberPositions = () => {
+    const spacing = calculateDistance();
+    const spanWidth = numberOneSpans[0].getBoundingClientRect().width;
+    numberOneSpans.forEach((span, index) => {
+      const xPosition = spacing * (index + 1) + spanWidth * index;
+      span.style.transform = `translate(${xPosition}px, 0)`;
+    });
+
+    numberTwoSpans.forEach((span, index) => {
+      const xPosition = spacing * (index + 1) + spanWidth * index;
+      span.style.transform = `translate(${xPosition}px, 0)`;
+    });
+  };
+  // 创建动画
+  tl.to(loaderPercent, {
+    textContent: Math.round(percent) + '%',
+  })
+  const u = (window.innerWidth - loaderNumbers.getBoundingClientRect().width) / 4;
+  // 循环处理每个数字
+  numberOneSpans.forEach((span, index) => {
+    tl.to('.loader__numbers', {
+        x: loaderNumbers.getBoundingClientRect().left + u * index,
+        repeatRefresh: !0,
+        duration: 1,
+        ease: 'power4.inOut',
+      }, index),
+      tl.to(span, {
+        x: 0,
+        duration: 1,
+      }, index)
+      .to(span, {
+        x: '20rem',
+        duration: 1,
+      }, index + 1);
+  });
+
+  numberTwoSpans.forEach((span, index) => {
+    tl.to(span, {
+        x: 0,
+        duration: 1,
+      }, index)
+      .to(span, {
+        x: '20rem',
+        duration: 1,
+      }, index + 1);
+  });
+</script>
+
+</html>

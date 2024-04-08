@@ -1,0 +1,109 @@
+.label-upload {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 16rem;
+    height: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: transparent;
+    color: #2b6cb0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    -webkit-backdrop-filter: blur(2.9px);
+    backdrop-filter: blur(2.9px);
+}
+
+.label-upload:hover {
+    background-color: #2b6cb0;
+    color: #ffffff;
+}
+
+.icon-upload {
+    /* margin-top: 50%; */
+    margin: 5%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.container-uploadANDrecord .text {
+
+    /* margin-top: 50%; */
+    font-size: 1.0rem;
+    line-height: 1.5;
+}
+
+#upload-userVoice {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+/* .container-uploadANDrecord {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 50%;
+    left: 5%;
+} */
+
+.container-uploadANDrecord {
+    position: relative;
+    display: flex;
+    width: 32rem;
+    height: 10rem;
+    flex-direction: row; 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 50%;
+    left: 5%;
+    background-color: transparent;
+    color: #2b6cb0;
+    border-radius: 0.5rem;
+    border: 0.09rem solid #000000;
+    box-shadow: 0 0 50px #8fe3f1;
+}
+
+.uploadModule {
+    left: 0;
+    height: 100%;
+    width: 50%;
+    opacity: 1;
+    z-index: 1;
+}
+
+.recordModule {
+    right: 0;
+    height: 100%;
+    width: 50%;
+    opacity: 1;
+    z-index: 1;
+}
+
+.uploadModule::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50%; /* 调整虚线距离上传模块的位置 */
+    width: 1px;
+    height: 100%;
+    background-color: #000; /* 虚线的颜色 */
+    border-left: 1px dashed #000; /* 虚线的样式 */
+}
+
+.recordModule::after {
+    display: none; /* 最后一个模块后面不需要虚线 */
+}

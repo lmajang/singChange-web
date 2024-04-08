@@ -1,0 +1,772 @@
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+    overflow-x: hidden !important;
+    background: #fff;
+}
+
+body{
+    background-color: rgb(3, 8, 66);
+    margin: 0;
+    display: block;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+}
+
+.MilesprojectComByHtmlToDesignFreeVersion06042024173240Gmt8 {
+    width: 1536px;
+    height: 1728px;
+    position: relative;
+}
+
+.DivHomepager {
+    height: 485.20px;
+    left: 57.60px;
+    top: 97.80px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+
+.DivHomepagerDisc {
+    align-self: stretch;
+    height: 485.20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 93.30px;
+    display: flex;
+}
+
+.D {
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.I {
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.S {
+    color: white;
+    font-size: 19.69px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.C {
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.number{
+    width: 12.56px; 
+    height: 25.60px; 
+    color: #3D90E5; 
+    font-size: 20px; 
+    font-family: Arial; 
+    font-weight: 700; 
+    word-wrap: break-word
+}
+
+.DivJsShellMenu{
+    width: 30px; 
+    height: 21px; 
+    left: 47.60px; 
+    top: 29.71px; 
+    position: absolute; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 7.50px; 
+    display: inline-flex
+}
+
+.DivShellMenuLine{
+    align-self: stretch; 
+    height: 2px; 
+    background: white;
+}
+
+.SpanJsHomepagerLastletter {
+    padding-right: 7.44px;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+}
+
+.DivJsProjectheadTitle {
+    height: 472.77px;
+    left: 295.68px;
+    top: 109.21px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 113.85px;
+    display: inline-flex;
+}
+
+.DivTextgridLine-KIND {
+    align-self: stretch; 
+    padding-right: 342px; 
+    justify-content: center; 
+    align-items: flex-start; 
+    display: inline-flex;
+}
+.DivTextgridLine-KIND
+.DivTextgridLetterMargin-K,
+.DivTextgridLine-KIND
+.DivTextgridLetterMargin-I,
+.DivTextgridLine-KIND
+.DivTextgridLetterMargin-N,
+.DivTextgridLine-KIND
+.DivTextgridLetterMargin-D {
+    width: 173.80px;
+    padding-right: 92.56px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+.DivTextgridLine-KIND
+.DivTextgridLetter-K,
+.DivTextgridLine-KIND
+.DivTextgridLetter-I,
+.DivTextgridLine-KIND
+.DivTextgridLetter-N,
+.DivTextgridLine-KIND
+.DivTextgridLetter-D {
+    align-self: stretch;
+    height: 94px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.DivTextgridLine-KIND .K,
+.DivTextgridLine-KIND .I,
+.DivTextgridLine-KIND .N,
+.DivTextgridLine-KIND .D {
+    text-align: center;
+    color: #3D90E5;
+    font-size: 81.90px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+
+.DivTextgridLine-OF {
+    align-self: stretch;
+    padding-left: 691.45px;
+    padding-right: 0.03px;
+    justify-content: center;
+    align-items: flex-start;
+    display: inline-flex;
+}
+.DivTextgridLine-OF
+.DivTextgridLetterMargin-O,
+.DivTextgridLine-OF
+.DivTextgridLetterMargin-F {
+    width: 172.86px;
+    padding-right: 92.56px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+.DivTextgridLine-OF
+.DivTextgridLetter-O,
+.DivTextgridLine-OF
+.DivTextgridLetter-F {
+    align-self: stretch;
+    height: 94px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.DivTextgridLine-OF .O,
+.DivTextgridLine-OF .F {
+    text-align: center;
+    color: #3D90E5;
+    font-size: 81.90px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+
+.DivTextgridLine-BLUE {
+    align-self: stretch;
+    padding-left: 173.80px;
+    padding-right: 168.20px;
+    justify-content: center;
+    align-items: flex-start;
+    display: inline-flex;
+}
+.DivTextgridLine-BLUE
+.DivTextgridLetterMargin-B,
+.DivTextgridLine-BLUE
+.DivTextgridLetterMargin-L,
+.DivTextgridLine-BLUE
+.DivTextgridLetterMargin-U,
+.DivTextgridLine-BLUE
+.DivTextgridLetterMargin-E {
+    width: 173.80px;
+    padding-right: 92.56px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+.DivTextgridLine-BLUE
+.DivTextgridLetter-B,
+.DivTextgridLine-BLUE
+.DivTextgridLetter-L,
+.DivTextgridLine-BLUE
+.DivTextgridLetter-U,
+.DivTextgridLine-BLUE
+.DivTextgridLetter-E {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.DivTextgridLine-BLUE .B,
+.DivTextgridLine-BLUE .L,
+.DivTextgridLine-BLUE .U,
+.DivTextgridLine-BLUE .E {
+    text-align: center;
+    color: #3D90E5;
+    font-size: 81.90px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+
+.DivTextgridLine-MILES {
+    align-self: stretch;
+    padding-right: 342px;
+    justify-content: center;
+    align-items: flex-start;
+    display: inline-flex;
+}
+
+.DivTextgridLine-MILES 
+.DivJsHometitleLetterMargin-M,
+.DivTextgridLine-MILES 
+.DivJsHometitleLetterMargin-I,
+.DivTextgridLine-MILES 
+.DivJsHometitleLetterMargin-L,
+.DivTextgridLine-MILES 
+.DivJsHometitleLetterMargin-E,
+.DivTextgridLine-MILES 
+.DivJsHometitleLetter-S {
+    width: 8.6%;
+    margin-right: 9.8%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+.DivTextgridLine-MILES 
+.DivJsHometitleLetter-M,
+.DivTextgridLine-MILES 
+.DivJsHometitleLetter-I,
+.DivTextgridLine-MILES 
+.DivJsHometitleLetter-L,
+.DivTextgridLine-MILES 
+.DivJsHometitleLetter-E,
+.DivTextgridLine-MILES 
+.DivJsHometitleLetter-S {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+.DivTextgridLine-MILES .M,
+.DivTextgridLine-MILES .I,
+.DivTextgridLine-MILES .L,
+.DivTextgridLine-MILES .E,
+.DivTextgridLine-MILES .S {
+    text-align: center;
+    color: #FEFEFE;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.DivTextgridLine-MILES .DivJsHometitleLetter-M {
+    height: 94px;
+    padding-left: 3.15px;
+    padding-right: 3.16px;
+}
+
+.DivTextgridLine-MILES .DivJsHometitleLetter-I {
+    height: 94px;
+    padding-left: 27.40px;
+    padding-right: 27.40px;
+}
+
+.DivTextgridLine-MILES .DivJsHometitleLetter-L {
+    height: 91px;
+    padding-left: 20.68px;
+    padding-right: 20.68px;
+}
+
+.DivTextgridLine-MILES .DivJsHometitleLetter-E {
+    height: 91px;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+.DivTextgridLine-MILES .DivJsHometitleLetter-S {
+    width: 81.24px;
+    align-self: stretch;
+    padding-left: 17.15px;
+    padding-right: 17.16px;
+}
+
+.DivTextgridLine-DAVIS {
+    align-self: stretch;
+    padding-left: 172.86px;
+    padding-right: 0.03px;
+    justify-content: center;
+    align-items: flex-start;
+    display: inline-flex;
+}
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetterMargin-D,
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetterMargin-A,
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetterMargin-V,
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetterMargin-I,
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetterMargin-S {
+    width: 172.86px;
+    padding-right: 92.56px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetter-D,
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetter-A,
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetter-V,
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetter-I,
+.DivTextgridLine-DAVIS
+.DivJsHometitleLetter-S {
+    align-self: stretch;
+    height: 94px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+.DivTextgridLine-DAVIS .D,
+.DivTextgridLine-DAVIS .A,
+.DivTextgridLine-DAVIS .V,
+.DivTextgridLine-DAVIS .I,
+.DivTextgridLine-DAVIS .S {
+    text-align: center;
+    color: #FEFEFE;
+    font-size: 81.90px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+.DivTextgridLine-DAVIS .DivJsHometitleLetter-D {
+    padding-left: 9.77px;
+    padding-right: 9.77px;
+}
+
+.DivTextgridLine-DAVIS .DivJsHometitleLetter-A {
+    padding-left: 9.11px;
+    padding-right: 9.12px;
+}
+
+.DivTextgridLine-DAVIS .DivJsHometitleLetter-V {
+    padding-left: 10.59px;
+    padding-right: 10.59px;
+}
+
+.DivTextgridLine-DAVIS .DivJsHometitleLetter-I {
+    padding-left: 26.93px;
+    padding-right: 26.94px;
+}
+
+.DivTextgridLine-DAVIS .DivJsHometitleLetter-S {
+    width: 80.30px;
+    align-self: stretch;
+    padding-left: 16.69px;
+    padding-right: 16.68px;
+}
+
+
+.DivHometitle {
+    height: 472.77px;
+    padding-top: 103.54px;
+    padding-bottom: 69.10px;
+    left: 295.68px;
+    top: 109.21px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 112.13px;
+    display: inline-flex;
+}
+
+.DivJsHomeDisc{
+    height: 3018.44px; 
+    left: -304.55px; 
+    top: -946.18px; 
+    position: absolute; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    display: inline-flex
+}
+
+.DivDisc{
+    height: 2155.20px; 
+    padding-bottom: 4.79px; 
+    transform: rotate(-127.56deg); 
+    transform-origin: 0 0; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    display: flex
+}
+
+.DivDisc .Svg{
+    width: 2150.41px; 
+    height: 2150.40px; 
+    position: relative
+}
+
+.Disc-Vector-1 {
+    width: 2150.20px;
+    height: 2150.38px;
+    left: -0.25px;
+    top: 0.18px;
+    position: absolute;
+    opacity: 0.40;
+}
+
+.Disc-Vector-2 {
+    width: 267.59px;
+    height: 104.80px;
+    left: 933.61px;
+    top: 927.05px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-3 {
+    width: 193.93px;
+    height: 46.39px;
+    left: 988.28px;
+    top: 1176.77px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-4 {
+    width: 262.43px;
+    height: 433.86px;
+    left: 721.03px;
+    top: 983.29px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-5 {
+    width: 102.62px;
+    height: 412.85px;
+    left: 1326.97px;
+    top: 826.41px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-6 {
+    width: 738.38px;
+    height: 912.66px;
+    left: 514.99px;
+    top: 512.32px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-7 {
+    width: 361.13px;
+    height: 717.75px;
+    left: 1279.91px;
+    top: 883.26px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-8 {
+    width: 1049.12px;
+    height: 481.59px;
+    left: 334.02px;
+    top: 1406.69px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-9 {
+    width: 1097.62px;
+    height: 462.49px;
+    left: 706.95px;
+    top: 270.07px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-10 {
+    width: 267.59px;
+    height: 104.80px;
+    left: 933.61px;
+    top: 927.05px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-11 {
+    width: 193.93px;
+    height: 46.39px;
+    left: 988.28px;
+    top: 1176.77px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-12 {
+    width: 2143.63px;
+    height: 1619.23px;
+    left: 3.38px;
+    top: 260.01px;
+    position: absolute;
+    opacity: 0.40;
+    background: #3D90E5;
+}
+
+.Disc-Vector-13 {
+    width: 102.30px;
+    height: 102.30px;
+    left: 1024.05px;
+    top: 1024.05px;
+    position: absolute;
+    background: #3D90E5;
+}
+
+.DivDiscText{
+    width: 83.78px; 
+    padding-top: 0.27px; 
+    padding-bottom: 0.93px; 
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    gap: 3.98px; 
+    display: inline-flex;
+}
+
+.DivDiscText .Svg{
+    width: 8px; 
+    height: 12.19px; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    display: inline-flex;
+}
+
+.Discover{
+    color: white; 
+    font-size: 10px; 
+    font-family: Arial; 
+    font-weight: 700; 
+    line-height: 10px; 
+    letter-spacing: 2.50px; 
+    word-wrap: break-word;
+}
+
+.DivDiscText-Vector-1{
+    width: 8px; 
+    height: 12.19px; 
+    background: white;
+}
+
+.DivShell {
+    width: 1536px;
+    height: 691.20px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.DivJsShellSound {
+    width: 20px;
+    padding-top: 15.40px;
+    left: 1458.40px;
+    top: 630.79px;
+    position: absolute;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8.50px;
+    display: inline-flex;
+}
+
+.DivJsShellPrevious {
+    height: 26px;
+    padding-top: 15px;
+    left: 706.73px;
+    top: 29.71px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+
+.DivJsShellNext {
+    height: 26px;
+    padding-bottom: 15px;
+    left: 723.91px;
+    top: 633.69px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+
+.DivJsShellNext
+.DivShellPagerText{
+    height: 11px; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    display: flex;
+}
+
+.NextAlbum{
+    color: white; 
+    font-size: 10px; 
+    font-family: Arial; 
+    font-weight: 700; 
+    letter-spacing: 2.50px;
+    word-wrap: break-word;
+}
+
+.DivJsShellNext
+.Before {
+    width: 7px; 
+    height: 1px; 
+    transform: rotate(45deg); 
+    transform-origin: 0 0; 
+    background: white;
+}
+
+.DivJsShellNext
+.After {
+    width: 7px; 
+    height: 1px; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 0; 
+    background: white;
+}
+
+.DivShellMenuLine {
+    align-self: stretch;
+    height: 2px;
+    background: white;
+}
+.DivJsShellPrevious
+.DivShellPagerText {
+    align-self: stretch;
+    height: 11px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+.DivJsShellPrevious
+.Before {
+    width: 7px;
+    height: 1px;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+    background: white;
+}
+
+.DivJsShellPrevious
+.After {
+    width: 7px;
+    height: 1px;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+    background: white;
+}
+
+.PreviousAlbum {
+    color: white; 
+    font-size: 10px; 
+    font-family: Arial; 
+    font-weight: 700; 
+    letter-spacing: 2.50px; 
+    word-wrap: break-word;
+}
+
+.Vector {
+    position: absolute;
+    opacity: 0.40;
+}
+
+.Discover {
+    color: white;
+    font-size: 10px;
+    font-family: Arial;
+    font-weight: 700;
+    line-height: 10px;
+    letter-spacing: 2.50px;
+    word-wrap: break-word;
+}

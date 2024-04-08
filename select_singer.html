@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cg-sageeast-3d-scroll | @Codegrid</title>
+    <link rel="stylesheet" href="./style/slider.css" />
+    <link rel="stylesheet" href="./style/font.css" />
+    <style></style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="home.html">GXFC</a>
+        </div>
+        <div class="links-2">
+            <a onclick="this.classList.toggle('active');" class="l__menu">
+                <img class="menu__background" src="./assets/menu_backgroung.svg" alt="Menu White Background">
+                <img class="menu__star" src="./assets/star-black.svg" alt="">
+            </a>
+        </div>
+    </nav>
+    <footer>
+        <p>Watch Showreel</p>
+        <p>Launching 2024</p>
+    </footer>
+    <div class="meun_container">
+        <div class="overlay">
+            <div class="menu-close-icon" onclick="toggleMenu()">
+                <p>✕</p>
+            </div>
+            <div class="menu-copy">
+                <div class="overlay-menu">
+                    <div class="menu-item">
+                        <div class="menu-item-name">
+                            <p id="active"><a href="#">HOME</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-name">
+                            <p><a href="#">WORK</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-name">
+                            <p><a href="#">ABOUT</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-name">
+                            <p><a href="#">CONTACT</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-name">
+                            <p><a href="#">LAB</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-info">
+                    <div class="menu-info-col">
+                        <a href="#" onclick="toggleMenu()">X ↗</a>
+                        <a href="#">Instagram ↗</a>
+                        <a href="#">LinkedIn ↗</a>
+                        <a href="#">Behance ↗</a>
+                        <a href="#">Dribbble ↗</a>
+                    </div>
+                    <div class="menu-info-col">
+                        <p>info@codegrid.com</p>
+                        <p>0923 3984 23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-preview">
+                <p>View ShowReel</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="active-slide">
+            <img src="./assets/1.jpg" alt="" />
+            <img src="./assets/2.jpg" alt="" />
+            <img src="./assets/3.jpg" alt="" />
+            <img src="./assets/4.jpg" alt="" />
+            <img src="./assets/5.jpg" alt="" />
+            <img src="./assets/6.jpg" alt="" />
+            <img src="./assets/7.jpg" alt="" />
+            <img src="./assets/8.jpg" alt="" />
+            <img src="./assets/9.jpg" alt="" />
+            <img src="./assets/10.jpg" alt="" />
+        </div>
+        <div class="slider">
+            <div class="slide" id="slide-1">
+                <div class="slide-copy">
+                    <p>Neo Elegance°</p>
+                    <p id="index">( ES 2023 0935 )</p>
+                </div>
+                <div class="slide-img"  id="slide-imag-1">
+                    <img src="./assets/1.jpg" alt="" />
+                </div>
+                <div class="description" id="description-1">
+
+                </div>
+            </div>
+            <div class="slide" id="slide-2">
+                <div class="slide-copy">
+                    <p>Future Luxe</p>
+                    <p id="index">( ES 2023 0936 )</p>
+                </div>
+                <div class="slide-img"  id="slide-imag-2">
+                    <img src="./assets/2.jpg" alt="" />
+                </div>
+                <div class="description" id="description-2">
+
+                </div>
+            </div>
+            <div class="slide" id="slide-3">
+                <div class="slide-copy">
+                    <p>Cyber Glam</p>
+                    <p id="index">( ES 2023 0937 )</p>
+                </div>
+                <div class="slide-img"  id="slide-imag-3">
+                    <img src="./assets/3.jpg" alt="" />
+                </div>
+                <div class="description" id="description-3">
+
+                </div>
+            </div>
+            <div class="slide" id="slide-4">
+                <div class="slide-copy">
+                    <p>Visionary Threads</p>
+                    <p id="index">( ES 2023 0938 )</p>
+                </div>
+                <div class="slide-img"  id="slide-imag-4">
+                    <img src="./assets/4.jpg" alt="" />
+                </div>
+                <div class="description" id="description-4">
+
+                </div>
+            </div>
+            <div class="slide" id="slide-5">
+                <div class="slide-copy">
+                    <p>Galactic Chic</p>
+                    <p id="index">( ES 2023 0939 )</p>
+                </div>
+                <div class="slide-img"  id="slide-imag-5">
+                    <img src="./assets/5.jpg" alt="" />
+                </div>
+                <div class="description" id="description-5">
+
+                </div>
+            </div>
+            <div class="slide" id="slide-6">
+                <div class="slide-copy">
+                    <p>Tech Sophistication</p>
+                    <p id="index">( ES 2023 0940 )</p>
+                </div>
+                <div class="slide-img"  id="slide-imag-6">
+                    <img src="./assets/6.jpg" alt="" />
+                </div>
+                <div class="description" id="description-6">
+                    <span class="description-text">Your description here</span>
+                </div>
+            </div>
+            <div class="slide" id="slide-7">
+                <div class="slide-copy">
+                    <p>Avant Edge</p>
+                    <p id="index">( ES 2023 0941 )</p>
+                </div>
+                <div class="slide-img" id="slide-imag-7">
+                    <img src="./assets/7.jpg" alt="" />
+                </div>
+                <div class="description" id="description-7">
+
+                </div>
+            </div>
+            <div class="slide" id="slide-8">
+                <div class="slide-copy">
+                    <p>Moda Futura</p>
+                    <p id="index">( ES 2023 0942 )</p>
+                </div>
+                <div class="slide-img" id="slide-imag-8">
+                    <img src="./assets/8.jpg" alt="" />
+                </div>
+                <div class="description" id="description-8">
+                    <span class="description-text">Your description here</span>
+                </div>
+            </div>
+            <div class="slide" id="slide-9">
+                <div class="slide-copy">
+                    <p>Eco Futurist</p>
+                    <p id="index">( ES 2023 0943 )</p>
+                </div>
+                <div class="slide-img" id="slide-imag-9">
+                    <img src="./assets/9.jpg" alt="" />
+                </div>
+                <div class="description" id="description-9">
+                </div>
+            </div>
+            <div class="slide" id="slide-10">
+                <div class="slide-copy">
+                    <p>Sleek Tomorrow</p>
+                    <p id="index">( ES 2023 0944 )</p>
+                </div>
+                <div class="slide-img" id="slide-imag-10">
+                    <img src="./assets/10.jpg" alt="" />
+                </div>
+                <div class="description" id="description-10">
+                    <span class="description-text" style="color: rgb(61, 144, 229);opacity:1;">MILES</span><br>
+                    <span class="description-text"style="color: #fff">MILES</span><br>
+                    &nbsp;<span class="description-text" style="color: rgb(61, 144, 229);opacity:1;">&nbsp;&nbsp;TONES</span><br>
+                    &nbsp;<span class="description-text" style="color: #fff">&nbsp;&nbsp;DAVIS</span><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
+    <script src="./javascript/slider-main.js"></script>
+</body>
+<script>
+    setTimeout(() => {
+        // Create a timeline
+        const timeline = gsap.timeline({
+            defaults: {
+                ease: 'power4.inOut',
+                duration: 1.5,
+            },
+        });
+        timeline.fromTo('.l__menu', {
+                opacity: 0,
+            }, {
+                opacity: 1,
+                duration: 2.5,
+                delay: 1,
+            }, 0),
+            timeline.fromTo('.logo', {
+                opacity: 0,
+            }, {
+                opacity: 1,
+                duration: 2.5,
+                delay: 1,
+            }, 0),
+            timeline.fromTo('.slider', {
+                opacity: 0,
+            }, {
+                opacity: 1,
+                stagger: .03,
+                duration: 2.5,
+                delay: 2.5,
+            }, 0),
+            timeline.play();
+    }, 0);
+</script>
+<script>
+    const slide_click = document.querySelectorAll(".slide-img");
+    slide_click.forEach((slide, index) => {
+        slide.addEventListener("click", function () {
+            // 根据点击的slide的索引，决定要跳转的页面
+            switch (index) {
+                case 0:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                case 1:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                case 2:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                case 3:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                case 4:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                case 5:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                case 6:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                case 7:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                case 8:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                case 9:
+                    console.log(index)
+                    window.location.href = "S0.html";
+                    break;
+                default:
+                    console.log(index);
+                    break;
+            }
+        });
+    });
+</script>
+<script>
+    // 获取所有的slide元素
+const slides = document.querySelectorAll('.slide');
+
+// 遍历每个slide
+slides.forEach(slide => {
+    // 获取slide的宽度
+    const slideWidth = slide.offsetWidth;
+    
+    // 获取slide中已有内容的宽度
+    const contentWidth = slide.querySelector('.slide-copy').offsetWidth;
+
+    // 计算空白区域的宽度
+    const whitespaceWidth = slideWidth - contentWidth;
+
+    // 创建描述文字元素
+    const description = document.createElement('div');
+    description.classList.add('description');
+    description.textContent = 'Your description text here'; // 替换成你想要显示的描述文字
+
+    // 设置描述文字的样式
+    description.style.position = 'absolute';
+    description.style.top = '50%';
+    description.style.transform = 'translateY(-50%)';
+
+    // 在空白区域的合适位置添加描述文字
+    if (whitespaceWidth > 0) {
+        if (whitespaceWidth >= 200) { // 如果空白区域宽度足够大，添加在左侧
+            description.style.left = '20px'; // 调整左侧间距
+            slide.appendChild(description);
+        } else { // 否则添加在右侧
+            description.style.right = '20px'; // 调整右侧间距
+            slide.appendChild(description);
+        }
+    }
+});
+
+</script>
+</html>

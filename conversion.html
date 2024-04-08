@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+      integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/conv.css" />
+    <link rel="stylesheet" href="./style/spin-blackANDwhite.css"/>
+    <link rel="stylesheet" href="./style/spin-colorsCircle.css"/>
+    <link rel="stylesheet" href="./style/uploadANDrecord.css"/>
+    <link rel="stylesheet" href="./style/menu.css"/>
+    <link rel="stylesheet" href="./style/font.css"/>
+    <link rel="stylesheet" href="./style/music-player.css"/>
+    <title>Login/Signup page</title>
+  </head>
+  <body>
+  <header class="header">
+    <a class="l__logo">
+        <img class="logo__left" src="./assets/logo-G.png" alt="Menu White Background">
+        <img class="logo__right" src="./assets/logo-G-gxfc.png" alt="">
+    </a>
+
+    <nav class="navbar">
+      <a onclick="this.classList.toggle('active');" class="l__menu">
+        <img class="menu__background" src="./assets/menu_backgroung.svg" alt="Menu White Background">
+        <img class="menu__star" src="./assets/star-black.svg" alt="">
+      </a>
+    </nav>
+  </header>
+    <div class="overlay">
+        <div class="menu-overlay-bar">
+        <div class="menu-logo">
+        </div>
+        <div class="c">
+        </div>
+        </div>
+        <div class="menu-close-icon" onclick="this.classList.toggle('active');">
+        <p>✕</p>
+        </div>
+        <div class="menu-copy">
+        <div class="overlay-menu">
+            <div class="menu-item">
+            <div class="menu-item-name">
+                <p id="active"><a href="#">HOME</a></p>
+            </div>
+            </div>
+            <div class="menu-item">
+            <div class="menu-item-name">
+                <p><a href="#">WORK</a></p>
+            </div>
+            </div>
+            <div class="menu-item">
+            <div class="menu-item-name">
+                <p><a href="#">ABOUT</a></p>
+            </div>
+            </div>
+            <div class="menu-item">
+            <div class="menu-item-name">
+                <p><a href="#">CONTACT</a></p>
+            </div>
+            </div>
+            <div class="menu-item">
+            <div class="menu-item-name">
+                <p><a href="#">LAB</a></p>
+            </div>
+            </div>
+        </div>
+        <div class="menu-info">
+            <div class="menu-info-col">
+            <a href="#" onclick="toggleMenu()">X ↗</a>
+            <a href="#">Instagram ↗</a>
+            <a href="#">LinkedIn ↗</a>
+            <a href="#">Behance ↗</a>
+            <a href="#">Dribbble ↗</a>
+            </div>
+            <div class="menu-info-col">
+            <p>info@codegrid.com</p>
+            <p>0923 3984 23</p>
+            </div>
+        </div>
+        </div>
+        <div class="menu-preview">
+        <p>View ShowReel</p>
+        </div>
+    </div>
+    <div class="overflow">
+      <canvas class="illo"></canvas>
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="container" id="container">
+      <div class="form-container right-container">
+        <form action="" id="" method="post">
+          <h1>你选择的目标歌曲</h1>
+          <div class="spin-select-targetSong">
+              <!-- <div class="circles" id="circles">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div> -->
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+            <div class="dot dot-right"></div>
+          </div>
+          <div class="userFunction">
+            <div class="container-uploadANDrecord">
+              <div class="uploadModule">
+                <label class="label-upload">
+                    <svg class="icon-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                    </svg>
+                    <span class="text">upload target song</span>
+                    <input id="upload-userVoice" type='file'>
+                </label>
+              </div>
+              <div class="recordModule">
+                <label class="label-upload">
+                    <svg class="icon-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                    </svg>
+                    <span class="text">Select another song</span>
+                    <input id="upload-userVoice" type='file'>
+                </label>
+              </div>
+            </div>
+            <!-- <button id="realsignUp" type="submit">exchange to another one</button> -->
+          </div>
+        </form>
+      </div>
+      <div class="form-container left-container">
+        <form action="" id="" method="post">
+          <h1>点击上传你的录音</h1>
+          <div class="spin-upload-userVoice">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+          </div>
+          <div class="userFunction">
+            <div class="container-uploadANDrecord">
+              <div class="uploadModule">
+                <label class="label-upload">
+                    <svg class="icon-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                    </svg>
+                    <span class="text">Select voice file</span>
+                    <input id="upload-userVoice" type='file'>
+                </label>
+              </div>
+              <div class="recordModule">
+                <label class="label-upload">
+                    <svg class="icon-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                    </svg>
+                    <span class="text">recording voice now</span>
+                    <input id="upload-userVoice" type='file'>
+                </label>
+              </div>
+            </div>
+            <!-- <button id="realsignIn" type="submit">upload</button> -->
+            <article class="screen">
+              <input type="checkbox" value="None" id="magicButton" name="check" />
+              <label class="main" for="magicButton"></label>
+      
+              <div class="coverImage"></div>
+              <div class="search"></div>
+              <div class="bodyPlayer"></div>
+      
+              <table class="list">
+                  <tr class="song">
+                      <td class="nr">
+                          <h5>1<h5>
+                      </td>
+                      <td class="title">
+                          <h6>Heavydirtysoul<h6>
+                      </td>
+                      <td class="length">
+                          <h5>3:54<h5>
+                      </td>
+                      <td><input type="checkbox" id="heart" /><label class="zmr" for="heart"></label></td>
+                  </tr>
+      
+                  <tr class="song">
+                      <td class="nr">
+                          <h5>2<h5>
+                      </td>
+                      <td class="title">
+                          <h6 style="color: #ff564c;">StressedOut<h6>
+                      </td>
+                      <td class="length">
+                          <h5>3:22<h5>
+                      </td>
+                      <td><input type="checkbox" id="heart1" checked /><label class="zmr" for="heart1"></label></td>
+                  </tr>
+      
+                  <tr class="song">
+                      <td class="nr">
+                          <h5>3<h5>
+                      </td>
+                      <td class="title">
+                          <h6>Ride<h6>
+                      </td>
+                      <td class="length">
+                          <h5>3:34<h5>
+                      </td>
+                      <td><input type="checkbox" id="heart2" /><label class="zmr" for="heart2"></label></td>
+                  </tr>
+      
+                  <tr class="song">
+                      <td class="nr">
+                          <h5>4<h5>
+                      </td>
+                      <td class="title">
+                          <h6>Fairy Local<h6>
+                      </td>
+                      <td class="length">
+                          <h5>3:27<h5>
+                      </td>
+                      <td><input type="checkbox" id="heart3" checked /><label class="zmr" for="heart3"></label></td>
+                  </tr>
+      
+                  <tr class="song">
+                      <td class="nr">
+                          <h5>5<h5>
+                      </td>
+                      <td class="title">
+                          <h6>Tear in My Heart<h6>
+                      </td>
+                      <td class="length">
+                          <h5>3:08<h5>
+                      </td>
+                      <td><input type="checkbox" id="heart4" /><label class="zmr" for="heart4"></label></td>
+                  </tr>
+      
+                  <tr class="song">
+                      <td class="nr">
+                          <h5>6<h5>
+                      </td>
+                      <td class="title">
+                          <h6>Lane Boy<h6>
+                      </td>
+                      <td class="length">
+                          <h5>4:13<h5>
+                      </td>
+                      <td><input type="checkbox" id="heart5" /><label class="zmr" for="heart5"></label></td>
+                  </tr>
+      
+                  <tr class="song">
+                      <td class="nr">
+                          <h5>7<h5>
+                      </td>
+                      <td class="title">
+                          <h6>The Judge<h6>
+                      </td>
+                      <td class="length">
+                          <h5>4:57<h5>
+                      </td>
+                      <td><input type="checkbox" id="heart6" /><label class="zmr" for="heart6"></label></td>
+                  </tr>
+      
+                  <tr class="song">
+                      <td class="nr">
+                          <h5>8<h5>
+                      </td>
+                      <td class="title">
+                          <h6>Doubt<h6>
+                      </td>
+                      <td class="length">
+                          <h5>3:11<h5>
+                      </td>
+                      <td><input type="checkbox" id="heart7" /><label class="zmr" for="heart7"></label></td>
+                  </tr>
+      
+                  <tr class="song">
+                      <td class="nr">
+                          <h5>9<h5>
+                      </td>
+                      <td class="title">
+                          <h6>Polarize<h6>
+                      </td>
+                      <td class="length">
+                          <h5>3:46<h5>
+                      </td>
+                      <td><input type="checkbox" id="heart8" /><label class="zmr" for="heart8"></label></td>
+                  </tr>
+              </table>
+      
+              <div class="shadow"></div>
+      
+              <div class="bar"></div>
+      
+              <div class="info">
+                  <h4>STRESSED OUT</h4>
+                  <h3>twenty one pilots - Blurryface</h3>
+              </div>
+              <audio preload="auto" id="audio" controls>
+                  <source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3">
+                  <source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.ogg">
+              </audio>
+              <table class="player">
+                  <td><input type="checkbox" id="backward" /><label class="backward" for="backward"></label></td>
+                  <td><input type="checkbox" id="play" title="Play" onclick="togglePlayPause()" /><label class="play"
+                          for="play"></label></td>
+                  <td><input type="checkbox" id="forward" /><label class="forward" for="forward"></label></td>
+              </table>
+      
+              <table class="footer">
+                  <td><input type="checkbox" id="love" checked/><label class="love" for="love"></label></td>
+                  <td><input type="checkbox" id="shuffle" /><label class="shuffle" for="shuffle"></label></td>
+                  <td><input type="checkbox" id="repeat" checked /><label class="repeat" for="repeat"></label></td>
+                  <td><input type="checkbox" id="options" /><label class="options" for="options"></label></td>
+              </table>
+      
+              <div class="current">
+                  <h2>STRESSED OUT</h2>
+              </div>
+      
+            </article>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
+    <script src='https://unpkg.com/zdog@1/dist/zdog.dist.js'></script>
+    <script src="./javascript/spin-snowgirl.js"></script>
+    <script src="./javascript/accumlation_snow.js"></script>
+    <script src="./javascript/music-player.js"></script>
+    <script src="./javascript/menu.js"></script>
+  </body>
+</html>
