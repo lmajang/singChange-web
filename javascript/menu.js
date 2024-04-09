@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleButton3 = document.querySelector(".menu-close-icon");
   const marquee = document.querySelector(".marquee");
   const hero_copy = document.querySelector(".hero-copy");
-  const sonw_girl = document.querySelector(".illo")
+  const sonw_girl = document.querySelector("dotlottie-player")
   let isOpen = false;
 
   gsap.set(".menu-item p", {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const masterTimeline = gsap.timeline({ paused: true });
 
   // 反转动画部分
-  masterTimeline.to('.illo', {
+  masterTimeline.to('dotlottie-player', {
     opacity: 0,
     stagger: .03,
     duration: 1,
@@ -98,24 +98,6 @@ masterTimeline.to(".sub-nav", {
 }, "<");
 
   toggleButton.addEventListener("click", function () {
-    if (isOpen) {
-      masterTimeline.reverse();
-    } else {
-      masterTimeline.play();
-    }
-    isOpen = !isOpen;
-  });
-
-  toggleButton2.addEventListener("click", function () {
-    if (isOpen) {
-      masterTimeline.reverse();
-    } else {
-      masterTimeline.play();
-    }
-    isOpen = !isOpen;
-  });
-
-  toggleButton3.addEventListener("click", function () {
     if (isOpen) {
       masterTimeline.reverse();
     } else {

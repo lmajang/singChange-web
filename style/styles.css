@@ -438,3 +438,38 @@ canvas {
       transform: scale(1)
   }
 }
+
+.l__logo{
+  cursor: pointer;
+  height: 6.6rem;
+  position: fixed;
+  left: 3.0rem;
+  top: 0.3rem;
+  opacity: 1;
+  /* transform: scale(0); */
+  width: 9.6rem;
+  z-index: 9999;
+  padding: 5px auto;
+}
+
+@media only screen and (min-width:768px) {
+  .l__logo {
+      left: 1.0rem;
+      top: 0.3rem
+  }
+}
+
+.logo__left {
+  height: 100%;
+  width: 70%;
+  background-size: cover;
+}
+
+
+.logo__right{
+  height: 50%;
+  left: 70%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}

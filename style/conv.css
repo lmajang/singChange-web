@@ -293,6 +293,16 @@ canvas {
   z-index: 10;
 }
 
+dotlottie-player{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px !important;
+  height: 500px !important;
+  z-index: 9999;
+}
+
 #canvas {
   position : absolute; 
   top : 0px; 
