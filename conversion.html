@@ -18,6 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+      <link href="/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
@@ -27,6 +28,7 @@
     <link rel="stylesheet" href="./style/menu.css"/>
     <link rel="stylesheet" href="./style/conv.css"/>
     <link rel="stylesheet" href="./style/font.css"/>
+
     <title>Login/Signup page</title>
   </head>
   <body>
@@ -160,7 +162,7 @@
                         <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
                     </svg>
                     <span class="text">upload target song</span>
-                    <input id="upload-targetSong" type='file'>
+                    <input id="upload-targetSong" class="uploadButton">
                 </label>
               </div>
               <div class="recordModule-right">
@@ -169,7 +171,7 @@
                         <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
                     </svg>
                     <span class="text">Select another song</span>
-                    <input id="select-storedSongs" type='file'>
+                    <input id="select-storedSongs" class="uploadButton">
                 </label>
               </div>
             </div>
@@ -178,15 +180,20 @@
                 <div class="player-track">
                     <div class="artist-name"></div>
                     <div class="music-name"></div>
-                    <div class="progress-bar">
-                        <div class="fillBar"></div>
+                    <div class="progress audio-progress audioProgress" role="progressbar" aria-label="Success example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 0%;background-color: rgba(0, 0, 0, 0.3)">
+                        </div>
                     </div>
+                    <div id="uploadMusicTime">
+                    </div>
+                    <div class="audioProgressHead"  style="left: 0%"></div>
                     <div class="time"></div>
                 </div>
                 <div class="circle">
                     <div class="circ"></div>
                     <div id="thumbnail" class="thumbnail"></div>
                 </div>
+                <audio id="uploadMusic" src="#" preload="auto"></audio>
                 <div class="player-control">
                     <i id="prev" class="prev-btn fas fa-backward"></i>
                     <i id="play" class="play-btn fas fa-play"></i>
@@ -237,6 +244,7 @@
                 <div class="dot"></div>
                 <div class="dot"></div>
           </div>
+
           <div class="userFunction">
             <div class="container-uploadANDrecord-left">
               <div class="uploadModule-left">
@@ -245,9 +253,10 @@
                         <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
                     </svg>
                     <span class="text">Select voice file</span>
-                    <input id="upload-userVoice" type='file'>
+                    <input id="upload-userVoice" class="uploadButton" >
                 </label>
               </div>
+
               <div class="recordModule-left">
                 <label class="label-upload">
                     <svg class="icon-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -259,13 +268,20 @@
               </div>
             </div>
             <!-- <button id="realsignIn" type="submit">upload</button> -->
+
             <div class="player player-left">
                 <div class="player-track">
                     <div class="artist-name"></div>
                     <div class="music-name"></div>
-                    <div class="progress-bar">
-                        <div class="fillBar"></div>
+<!--                    <div class="progress-bar">-->
+<!--                        -->
+<!--                        <div class="audioProgressHead"  style="left: 0%"></div>-->
+<!--                    </div>-->
+                    <div class="progress audio-progress audioProgress" role="progressbar" aria-label="Success example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 0%;background-color: rgba(0, 0, 0, 0.3)">
+                        </div>
                     </div>
+                    <div class="audioProgressHead"  style="left: 0%"></div>
                     <div class="time"></div>
                 </div>
                 <div class="circle">
@@ -283,6 +299,7 @@
         </form>
       </div>
     </div>
+    <script src="/js/bootstrap.bundle.min.js"  type="text/javascript"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -292,6 +309,7 @@
     <script src="./javascript/music-player.js"></script>
     <script src="./javascript/uploadFinish.js"></script>
     <script src="./javascript/menu.js"></script>
+    <script src="./javascript/utils.js"  type="text/javascript"></script>
     <script>
         $("#list").click(function() {
             $(".player-track").toggleClass("active");
