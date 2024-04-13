@@ -76,44 +76,44 @@ $(document).ready(function () {
 		$(".time").html(indicatorLabel);
 	});
 
-	$("#play").click(function playOrPause() {
-		if (song.paused) {
-			song.play();
-			playing = true;
-			$("#play").addClass("fa-pause");
-			$("#play").removeClass("fa-play");
-			$("#thumbnail").addClass("active");
-			$(".play-btn:before").css("padding-left", 300);
-
-			document.getElementsByClassName("play-btn")[0].classList.add("pause-btn");
-			document.getElementsByClassName("play-btn")[0].classList.remove("play-btn");
-		} else {
-			song.pause();
-			playing = false;
-			$("#play").removeClass("fa-pause");
-			$("#play").addClass("fa-play");
-			$("#thumbnail").removeClass("active");
-
-			document.getElementsByClassName("pause-btn")[0].classList.add("play-btn");
-			document
-				.getElementsByClassName("pause-btn")[0]
-				.classList.remove("pause-btn");
-		}
-	});
-
-	$("#prev").click(function prev() {
-		CurrentSong--;
-		if (CurrentSong < 0) {
-			CurrentSong = beatpack.length - 1;
-		}
-		playSong();
-	});
-
-	$("#next").click(function next() {
-		CurrentSong++;
-		if (CurrentSong == beatpack.length) {
-			CurrentSong = 0;
-		}
-		playSong();
-	});
+	// $("#play").click(function playOrPause() {
+	// 	if (song.paused) {
+	// 		song.play();
+	// 		playing = true;
+	// 		$("#play").addClass("fa-pause");
+	// 		$("#play").removeClass("fa-play");
+	// 		$("#thumbnail").addClass("active");
+	// 		$(".play-btn:before").css("padding-left", 300);
+	//
+	// 		document.getElementsByClassName("play-btn")[0].classList.add("pause-btn");
+	// 		document.getElementsByClassName("play-btn")[0].classList.remove("play-btn");
+	// 	} else {
+	// 		song.pause();
+	// 		playing = false;
+	// 		$("#play").removeClass("fa-pause");
+	// 		$("#play").addClass("fa-play");
+	// 		$("#thumbnail").removeClass("active");
+	//
+	// 		document.getElementsByClassName("pause-btn")[0].classList.add("play-btn");
+	// 		document
+	// 			.getElementsByClassName("pause-btn")[0]
+	// 			.classList.remove("pause-btn");
+	// 	}
+	// });
+	//
+	// $("#prev").click(function prev() {
+	// 	CurrentSong--;
+	// 	if (CurrentSong < 0) {
+	// 		CurrentSong = beatpack.length - 1;
+	// 	}
+	// 	playSong();
+	// });
+	//
+	// $("#next").click(function next() {
+	// 	CurrentSong++;
+	// 	if (CurrentSong == beatpack.length) {
+	// 		CurrentSong = 0;
+	// 	}
+	// 	playSong();
+	// });
 });

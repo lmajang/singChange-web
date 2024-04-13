@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../singChange-app.iml" filepath="$PROJECT_DIR$/../singChange-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/singChange-web.iml" filepath="$PROJECT_DIR$/singChange-web.iml" />
     </modules>
   </component>
 </project>
