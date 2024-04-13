@@ -1,0 +1,115 @@
+.list {
+    position: relative;
+    width: 32rem;
+    height: 12rem;
+    list-style-type: none;
+    padding: 0;
+    /* margin: 0; */
+    margin-top: 50%;
+    /* left: 5%; */
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    /* 添加模糊效果 */
+    box-shadow: 0 0 50px #8fe3f1;
+    -webkit-backdrop-filter: blur(2.9px);
+    backdrop-filter: blur(2.9px);
+    cursor: pointer;
+    pointer-events: all;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+  }
+
+  div.bottom-line {
+    height: 1px;
+    background-color: rgba(143, 225, 223, 0.7);;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    left: 8%;
+    width: 100%;
+  }
+  
+  .list li {
+    position: relative;
+    padding: 5px 10px;
+    margin: 0 auto;
+    color: #000;
+    transition: opacity 0.3s;
+    left: 8%;
+    z-index: 1;
+    text-align: left;
+  }
+  .list li:hover {
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .li-before {
+    position: absolute;
+    top: 20%;
+    left: -5%;
+    width: 17px;
+    height: 17px;
+    opacity: 0;
+    background-color: transparent;
+    background-image: url('../assets/record.svg');
+    background-size: cover;
+  }
+
+  #modleANDhistory::-webkit-scrollbar-track
+  {
+      /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+      background-color: rgba(255, 255, 255, 0);
+      border-radius: 10px;
+      box-shadow: 0 0 50px #8fe3f1;
+      -webkit-backdrop-filter: blur(2.9px);
+      backdrop-filter: blur(2.9px);
+  }
+  
+  #modleANDhistory::-webkit-scrollbar
+  {
+      width: 7px;
+      background-color: rgba(255, 255, 255, 0);
+  }
+  
+  #modleANDhistory::-webkit-scrollbar-thumb
+  {
+      border-radius: 10px;
+      background-image: -webkit-gradient(linear,
+                                         left bottom,
+                                         left top,
+                                         color-stop(0.44, rgb(122,153,217)),
+                                         color-stop(0.72, rgb(73,125,189)),
+                                         color-stop(0.86, rgb(28,58,148)));
+  }
+
+  /* 系统模型和本地历史模型的样式 */
+.system-model,
+.local-history {
+    font-weight: bold;
+    text-align: center !important;
+    left: 0% !important;
+    color: #000 !important; /* 修改颜色为更深的灰色 */
+    cursor: default;
+}
+
+.system-model .bottom-line,
+.local-history .bottom-line {
+    height: 2px !important;
+    background-color: rgba(143, 225, 223, 1) !important;
+    text-align: center;
+    align-items: center;
+    /* margin-top: 10px; */
+    left: 0% !important;
+    width: 100% !important;
+  }
+
+/* 重新定位系统模型和本地历史模型 */
+.system-model {
+    margin-top: 20px; /* 间距调整 */
+}
+
+.local-history {
+    margin-bottom: 20px; /* 间距调整 */
+}

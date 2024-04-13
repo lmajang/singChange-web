@@ -14,7 +14,6 @@ body {
 	position: absolute;
 	top: 8px;
 	left: 8px;
-	background: url("https://trevor-reznik.github.io/guides/email-template/4.jpg");
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	background-size: cover;
@@ -24,6 +23,16 @@ body {
 	opacity: 0;
 	top: 75%;
 	left: 100%;
+	transform: translate(0%, -50%);
+	padding: 10px;
+	user-select: none;
+}
+
+.player-center {
+	position: absolute;
+	opacity: 1;
+	top: 75%;
+	left: 30%;
 	transform: translate(0%, -50%);
 	padding: 10px;
 	user-select: none;
@@ -166,3 +175,4 @@ body {
 .player .player-track.active {
     top: -100px; /* 自定义展开后的位置 */
 }
+

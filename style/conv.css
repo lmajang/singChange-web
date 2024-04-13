@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
 * {
   box-sizing: border-box;
@@ -155,7 +156,10 @@ input {
   width: 100%;
 }
 
+
+
 .container {
+  opacity: 0;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
   /* box-shadow: 0 0 20px #cec07a; */
@@ -168,7 +172,28 @@ input {
   width: 1200px;
   max-width: 100%;
   min-height: 550px;
-  animation: slideRight 3s ease forwards;
+  /* animation: slideRight 10s ease forwards ; */
+}
+
+.conversionContainer{
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  /* box-shadow: 0 0 20px #cec07a; */
+  box-shadow: 0 0 50px #8fe3f1;
+  -webkit-backdrop-filter: blur(2.9px);
+  backdrop-filter: blur(2.9px);
+  top: 10%;
+  left: 0%;
+  position: absolute;
+  overflow: hidden;
+  width: 1200px;
+  max-width: 100%;
+  min-height: 550px;
+
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
 }
 
 .form-container {
@@ -268,6 +293,7 @@ footer a {
     align-items: center;
     justify-content: center;
     top: 5%;
+    font-family: 'Poiret One', cursive;
 }
 .right-container h1{
     position: relative;
@@ -276,6 +302,7 @@ footer a {
     align-items: center;
     justify-content: center;
     top: 5%;
+    font-family: 'Poiret One', cursive;
 }
 
 canvas {
@@ -422,4 +449,98 @@ dotlottie-player{
   to {
       transform: scale(1)
   }
+}
+
+
+.ConverionButton-Container{
+  position: absolute;
+  opacity: 0;
+  left: 42.5%;
+  top: 40%;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 9999;
+}
+
+/* 按钮样式 */
+.buttonConversion {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  padding: 0.75em 1em;
+  color: #8fe3f1;
+  border: 0.15em solid #8fe3f1;
+  border-radius: 2em;
+  transition: 4s;
+}
+
+.buttonConversion:before,
+.buttonConversion:after {
+  content: "";
+  position: absolute;
+  top: -1.5em;
+  z-index: -1;
+  width: 200%;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 40%;
+  background-color: rgba(0, 0, 255, 0.25);
+  transition: 4s;
+}
+
+.buttonConversion:before {
+  left: -80%;
+  transform: translate3d(0, 5em, 0) rotate(-340deg);
+}
+
+.buttonConversion:after {
+  right: -80%;
+  transform: translate3d(0, 5em, 0) rotate(390deg);
+}
+
+.buttonConversion:hover,
+.buttonConversion:focus {
+  color: white;
+}
+
+.buttonConversion:hover:before,
+.buttonConversion:hover:after,
+.buttonConversion:focus:before,
+.buttonConversion:focus:after {
+  transform: none;
+  background-color: #8fe3f1;
+}
+
+.card-container {
+
+  perspective: 1000px;
+}
+
+.card {
+  width: 1200px;
+  height: 550px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: transparent;
+}
+
+.back {
+  background-color: transparent;
+  transform: rotateY(180deg);
 }

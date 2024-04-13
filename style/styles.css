@@ -374,6 +374,7 @@ canvas {
   opacity: 0;
   /* transform: scale(0); */
   width: 6.6rem;
+  z-index: 9999;
 }
 
 @media only screen and (min-width:768px) {
@@ -447,9 +448,8 @@ canvas {
   top: 0.3rem;
   opacity: 1;
   /* transform: scale(0); */
-  width: 9.6rem;
+  width: 6.6rem;
   z-index: 9999;
-  padding: 5px auto;
 }
 
 @media only screen and (min-width:768px) {
@@ -461,15 +461,79 @@ canvas {
 
 .logo__left {
   height: 100%;
-  width: 70%;
-  background-size: cover;
+  width: 100%
 }
 
 
 .logo__right{
   height: 50%;
-  left: 70%;
+  left: 100%;
   position: absolute;
   top: 50%;
   width: 100%;
+}
+
+.ConverionButton-Container-home{
+  position: absolute;
+  opacity: 1;
+  left: 42.5%;
+  top: 85%;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 9999;
+}
+
+/* 按钮样式 */
+.buttonConversion-home {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  padding: 0.75em 1em;
+  color: #8fe3f1;
+  border: 0.15em solid #8fe3f1;
+  border-radius: 2em;
+  transition: 4s;
+  opacity: 0;
+}
+
+.buttonConversion-home:before,
+.buttonConversion-home:after {
+  content: "";
+  position: absolute;
+  top: -1.5em;
+  z-index: -1;
+  width: 200%;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 40%;
+  background-color: rgba(0, 0, 255, 0.25);
+  transition: 4s;
+}
+
+.buttonConversion-home:before {
+  left: -80%;
+  transform: translate3d(0, 5em, 0) rotate(-340deg);
+}
+
+.buttonConversion-home:after {
+  right: -80%;
+  transform: translate3d(0, 5em, 0) rotate(390deg);
+}
+
+.buttonConversion-home:hover,
+.buttonConversion-home:focus {
+  color: white;
+}
+
+.buttonConversion-home:hover:before,
+.buttonConversion-home:hover:after,
+.buttonConversion-home:focus:before,
+.buttonConversion-home:focus:after {
+  transform: none;
+  background-color: #8fe3f1;
 }

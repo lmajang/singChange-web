@@ -64,6 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: 'Expo.inOut',
   });
 
+  masterTimeline.to('#rotateButton', {
+    opacity: 0,
+    duration: .6,
+    ease: 'Expo.inOut',
+  },0);
+
 
   
   // 菜单动画部分，使用反转动画的总持续时间作为延迟

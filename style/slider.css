@@ -47,7 +47,7 @@ footer {
   align-items: center;
 }
 
-nav > div {
+nav>div {
   flex: 1;
   pointer-events: all;
 }
@@ -79,7 +79,7 @@ nav > div {
 
 .container {
   width: 100%;
-  height: 2000vh;
+  height: 1000vh !important;
 }
 
 .active-slide {
@@ -117,10 +117,12 @@ nav > div {
   overflow: visible;
   z-index: 1;
 }
+
 .slide-img {
   /* left: 50%; */
   width: 400px;
   height: 500px;
+  cursor: pointer;
 }
 
 .slide-copy p {
@@ -195,6 +197,7 @@ nav > div {
   transform: translateX(60%) translateY(-50%) translateZ(-7500px);
   opacity: 0;
 }
+
 #slide-8 {
   position: absolute;
   top: 50%;
@@ -219,7 +222,7 @@ nav > div {
   opacity: 1;
 }
 
-.l__menu{
+.l__menu {
   cursor: pointer;
   height: 4.7rem;
   position: fixed;
@@ -232,8 +235,8 @@ nav > div {
 
 @media only screen and (min-width:768px) {
   .l__menu {
-      right: 3.6rem;
-      top: 0rem
+    right: 3.6rem;
+    top: 0rem
   }
 }
 
@@ -248,7 +251,7 @@ nav > div {
   width: 100%
 }
 
-.menu__star{
+.menu__star {
   animation: rotate-a3c343d6 1.3s cubic-bezier(.81, -.1, .3, .99) 1;
   height: 2.8rem;
   left: 50%;
@@ -259,37 +262,37 @@ nav > div {
 }
 
 @media only screen and (min-width:768px) {
-  .l__menu:hover .menu__background{
-      animation: none;
-      transform: scale(1.1)
+  .l__menu:hover .menu__background {
+    animation: none;
+    transform: scale(1.1)
   }
 
-  .l__menu:hover .menu__star{
-      animation: none
+  .l__menu:hover .menu__star {
+    animation: none
   }
 }
 
 @keyframes rotate-a3c343d6 {
   0% {
-      transform: translate(-50%, -50%) rotate(0)
+    transform: translate(-50%, -50%) rotate(0)
   }
 
   to {
-      transform: translate(-50%, -50%) rotate(180deg)
+    transform: translate(-50%, -50%) rotate(180deg)
   }
 }
 
 @keyframes scale-a3c343d6 {
   0% {
-      transform: scale(1)
+    transform: scale(1)
   }
 
   50% {
-      transform: scale(1.1)
+    transform: scale(1.1)
   }
 
   to {
-      transform: scale(1)
+    transform: scale(1)
   }
 }
 
@@ -382,12 +385,12 @@ nav > div {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.menu-item-name{
+.menu-item-name {
   position: relative;
   font-family: "Saans TRIAL";
 }
 
-.menu-item-name a{
+.menu-item-name a {
   font-family: "Saans TRIAL";
 }
 
@@ -460,17 +463,17 @@ nav > div {
   align-items: flex-end;
 }
 
-.menu-preview p{
+.menu-preview p {
   color: #000000;
   font-family: "Saans TRIAL";
 }
 
-.menu-info-col a{
+.menu-info-col a {
   color: #000000;
   font-family: "Saans TRIAL";
 }
 
-.menu-info-col p{
+.menu-info-col p {
   color: #000000;
   font-family: "Saans TRIAL";
 }
@@ -498,90 +501,178 @@ nav > div {
 }
 
 .description {
-  position: absolute; /* 设置为绝对定位 */
-  font-size: 30px; /* 设置描述文字大小 */
+  position: absolute;
+  /* 设置为绝对定位 */
+  font-size: 30px;
+  /* 设置描述文字大小 */
   height: 300px;
   width: 500px;
-  opacity: 1; /* 初始状态隐藏描述文字 */
-  pointer-events: none; /* 防止描述文字影响点击事件 */
+  opacity: 1;
+  /* 初始状态隐藏描述文字 */
+  pointer-events: none;
+  /* 防止描述文字影响点击事件 */
 }
 
 #description-9::before {
-  content: "Your description here before before before";
-  text-align: center;
+  content: "GXFC\  \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\a   \00a0\00a0 SVC";
+  text-align: left;
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 35%;
-  left: -250%; /* 将伪元素放置在slide的左侧 */
+  top: 25%;
+  left: -220%;
+  /* 将伪元素放置在slide的左侧 */
   transform: translateY(-50%);
-  white-space: nowrap; /* 防止文字换行 */
-  padding: 5px; /* 可选：调整文字与边框的间距 */
-  z-index: 1; /* 确保描述文字在伪元素之上 */
+  white-space: normal;
+  /* 防止文字换行 */
+  padding: 0px;
+  /* 可选：调整文字与边框的间距 */
+  z-index: 1;
+  /* 确保描述文字在伪元素之上 */
+  color: rgb(61, 144, 229);
+  /* 设置文字颜色 */
+  opacity: 1;
+  /* 设置文字透明度 */
+  font-size: 70px;
+  /* 设置文字大小 */
+  font-weight: 400;
+  /* 设置文字粗细 */
+  letter-spacing: 70px;
+  /* 设置字间距 */
 }
 
-#description-10{
-  top: 8%;
-  right:35%; 
+#description-9::after {
+  content: "JUSTIN\  \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\a \00a0\00a0 BIEBER";
+  text-align: left;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 55.5%;
+  left: -220%;
+  /* 将伪元素放置在slide的左侧 */
+  transform: translateY(-50%);
+  white-space: normal;
+  /* 防止文字换行 */
+  padding: 0px;
+  /* 可选：调整文字与边框的间距 */
+  z-index: 1;
+  /* 确保描述文字在伪元素之上 */
+  color: white;
+  /* 设置文字颜色 */
+  opacity: 1;
+  /* 设置文字透明度 */
+  font-size: 70px;
+  /* 设置文字大小 */
+  font-weight: 400;
+  /* 设置文字粗细 */
+  letter-spacing: 70px;
+  /* 设置字间距 */
 }
 
-#description-9{
+#description-10 {
+  top: 10%;
+  right: 35%;
+}
+
+#description-9 {
   top: 35%;
-  left: 25%; 
+  left: 25%;
 }
 
-#description-8{
-  top: 35%;
-  right:25%; 
+#description-8 {
+  top: 10%;
+  right: 35%;
 }
 
-#description-7{
+#description-7 {
   top: 35%;
-  left:25%; 
+  left: 25%;
 }
 
 #description-7::before {
-  content: "Your description here before before before";
-  text-align: center;
+  content: "GXFC\  \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\a   \00a0\00a0 SVC";
+  text-align: left;
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 35%;
-  left: -250%; /* 将伪元素放置在slide的左侧 */
+  top: 25%;
+  left: -230%;
+  /* 将伪元素放置在slide的左侧 */
   transform: translateY(-50%);
-  white-space: nowrap; /* 防止文字换行 */
-  padding: 5px; /* 可选：调整文字与边框的间距 */
-  z-index: 1; /* 确保描述文字在伪元素之上 */
+  white-space: normal;
+  /* 防止文字换行 */
+  padding: 0px;
+  /* 可选：调整文字与边框的间距 */
+  z-index: 1;
+  /* 确保描述文字在伪元素之上 */
+  color: rgb(61, 144, 229);
+  /* 设置文字颜色 */
+  opacity: 1;
+  /* 设置文字透明度 */
+  font-size: 70px;
+  /* 设置文字大小 */
+  font-weight: 400;
+  /* 设置文字粗细 */
+  letter-spacing: 70px;
+  /* 设置字间距 */
 }
 
-#description-6{
-  top: 35%;
-  right:25%; 
+#description-7::after {
+  content: "DONALD\  \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\a \00a0\00a0 TRUMP";
+  text-align: left;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 55.5%;
+  left: -230%;
+  /* 将伪元素放置在slide的左侧 */
+  transform: translateY(-50%);
+  white-space: normal;
+  /* 防止文字换行 */
+  padding: 0px;
+  /* 可选：调整文字与边框的间距 */
+  z-index: 1;
+  /* 确保描述文字在伪元素之上 */
+  color: white;
+  /* 设置文字颜色 */
+  opacity: 1;
+  /* 设置文字透明度 */
+  font-size: 70px;
+  /* 设置文字大小 */
+  font-weight: 400;
+  /* 设置文字粗细 */
+  letter-spacing: 70px;
+  /* 设置字间距 */
 }
 
-#description-5{
+#description-6 {
   top: 35%;
-  left:25%; 
+  right: 25%;
 }
 
-#description-4{
+#description-5 {
   top: 35%;
-  right:25%; 
+  left: 25%;
 }
 
-#description-3{
+#description-4 {
   top: 35%;
-  left:0%; 
+  right: 25%;
 }
 
-#description-2{
+#description-3 {
   top: 35%;
-  right:25%; 
+  left: 0%;
 }
 
-#description-1{
+#description-2 {
   top: 35%;
-  left:25%; 
+  right: 25%;
+}
+
+#description-1 {
+  top: 35%;
+  left: 25%;
 }
 
 .description-text {
@@ -591,10 +682,11 @@ nav > div {
   font-weight: 400;
   letter-spacing: 70px;
   position: relative;
-  z-index: 1; /* 确保描述文字在伪元素之上 */
+  z-index: 1;
+  /* 确保描述文字在伪元素之上 */
 }
 
-.l__logo{
+.l__logo {
   cursor: pointer;
   height: 6.6rem;
   position: fixed;
@@ -602,29 +694,45 @@ nav > div {
   top: 0.3rem;
   opacity: 1;
   /* transform: scale(0); */
-  width: 9.6rem;
+  width: 6.6rem;
   z-index: 9999;
-  padding: 5px auto;
 }
 
 @media only screen and (min-width:768px) {
   .l__logo {
-      left: 1.0rem;
-      top: 0.3rem
+    left: 1.0rem;
+    top: 0.3rem
   }
 }
 
 .logo__left {
   height: 100%;
-  width: 70%;
-  background-size: cover;
+  width: 100%
 }
 
 
-.logo__right{
+.logo__right {
   height: 50%;
-  left: 70%;
+  left: 100%;
   position: absolute;
   top: 50%;
   width: 100%;
+}
+
+#description-team {
+    content: attr(data-content); /* 将文字内容作为伪元素内容 */
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.44, rgb(122, 153, 217)),
+        color-stop(0.72, rgb(73, 125, 189)),
+        color-stop(0.86, rgb(28, 58, 148))
+    );
+    position: relative;
+    display: inline-block;
+    color: transparent; /* 将文字颜色设置为透明，只显示背景色 */
+    -webkit-background-clip: text; /* 设置背景色填充范围为文字 */
+    background-clip: text;
+    z-index: 1;
 }
