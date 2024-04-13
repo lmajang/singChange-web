@@ -459,6 +459,7 @@ dotlottie-player{
   top: 40%;
   cursor: pointer;
   pointer-events: all;
+  display: none;
   z-index: 9999;
 }
 

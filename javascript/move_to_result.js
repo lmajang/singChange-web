@@ -11,11 +11,14 @@ const timeline = gsap.timeline({
         ease: 'power4.inOut',
     },
 });
+timeline.set(ConverionButton_Container,{
+    display:"block",
+}),
 timeline.to(ConverionButton_Container, {
     opacity: 0,
     duration: 2,
     delay: -.6,
-}, 0)
+}, 0),
 // timeline.fromTo(ConverionButton_Container, {
 //     x: '0',
 //     y: '0',
@@ -27,7 +30,7 @@ timeline.to(ConverionButton_Container, {
 // },0)
 timeline.to(ConverionButton_Container, {
     top: '20%',
-    left: '12%',
+    left: '10%',
     delay: 1,
     duration: 2,
 }, 0);
@@ -60,7 +63,9 @@ const timelineR = gsap.timeline({
         ease: 'power4.inOut',
     },
 });
-
+timeline.set(ConverionButton_Container,{
+    display:"none",
+}),
 timelineR.to(ConverionButton_Container, {
     opacity: 0,
     duration: 2,
@@ -87,7 +92,10 @@ timelineR.to('.bar-container-c', {
         opacity: 1,
         duration: 0.8,
         delay: 6,
-    }, 0)
+    }, 0),
+    timeline.set(ConverionButton_Container,{
+        display:"block",
+    }),
 
 // timeline.to(ConverionButton_Container, {
 //         opacity: 1,
