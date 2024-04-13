@@ -1,3 +1,42 @@
+
+//upload动画
+function uploadAnimation(){
+    const timeline = gsap.timeline({
+        onComplete: () => {
+            console.log('目标歌曲上传完成！');
+        },
+        defaults: {
+            ease: 'power4.inOut',
+        },
+    });
+
+    timeline.fromTo('.container-uploadANDrecord-right', {
+        left: '5%',
+        opacity: 1,
+    }, {
+        opacity: 0,
+        left: '100%',
+        stagger: .03,
+        duration: 2.5,
+        delay: -.6,
+    }, 0),
+
+        timeline.fromTo('.player-right', {
+            left: '100%',
+            opacity: 0,
+        }, {
+            opacity: 1,
+            left: '10%',
+            stagger: .03,
+            duration: 2.5,
+            delay: 1.5,
+        }, 0),
+
+        timeline.play();
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   
     var uploadModule_l = document.querySelector('.uploadModule-left');
@@ -224,6 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
               timeline.play();
         }
     });
+
 
     // selectSong.addEventListener('click', function() {
     //     // 检查是否有选定文件

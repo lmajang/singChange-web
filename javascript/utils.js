@@ -248,199 +248,6 @@ function sendAudioFile(voiceCh,audioFile){
     })
 }
 
-function animalplay(){
-    if (true) {
-        // 获取选定的文件
-        // var file = uploadInput.files[0];
-
-        // console.log('Selected file:', file.name);
-        // console.log('File size:', file.size);
-
-        alert('File uploaded successfully!');
-
-        const timeline = gsap.timeline({
-            onComplete: () => {
-                console.log('用户音色上传完成！');
-            },
-            defaults: {
-                ease: 'power4.inOut',
-            },
-        });
-
-        timeline.fromTo('.container-uploadANDrecord-left', {
-            left: 0,
-            opacity: 1,
-        }, {
-            opacity: 0,
-            left: '-100%',
-            stagger: .03,
-            duration: 2.5,
-            delay: -.6,
-        }, 0),
-
-            timeline.fromTo('.player-left', {
-                left: '-100%',
-                opacity: 0,
-            }, {
-                opacity: 1,
-                left: '10%',
-                stagger: .03,
-                duration: 2.5,
-                delay: 1.5,
-            }, 0),
-
-            timeline.play();
-    }
-
-    if (true) {
-        // 获取选定的文件
-        // var file = recordInput.files[0];
-
-        // console.log('Selected file:', file.name);
-        // console.log('File size:', file.size);
-
-        alert('File uploaded successfully!');
-
-        const timeline = gsap.timeline({
-            onComplete: () => {
-                console.log('用户音色上传完成！');
-            },
-            defaults: {
-                ease: 'power4.inOut',
-            },
-        });
-
-        timeline.fromTo('.container-uploadANDrecord-left', {
-            left: 0,
-            opacity: 1,
-        }, {
-            opacity: 0,
-            left: '-100%',
-            stagger: .03,
-            duration: 2.5,
-            delay: -.6,
-        }, 0),
-
-            timeline.fromTo('.player-left', {
-                left: '-100%',
-                opacity: 0,
-            }, {
-                opacity: 1,
-                left: '10%',
-                stagger: .03,
-                duration: 2.5,
-                delay: 1.5,
-            }, 0),
-
-            timeline.play();
-    }
-
-    const timeline = gsap.timeline({
-        onComplete: () => {
-            console.log('用户音色上传完成！');
-        },
-        defaults: {
-            ease: 'none',
-        },
-    });
-    timeline.fromTo('#upload', {
-        width:'20%',
-    }, {
-        width:'33%',
-        stagger: .03,
-        duration: 0.7,
-        delay: 0,
-    }, 0),
-
-        timeline.fromTo('#record', {
-            width:'20%',
-        }, {
-            width:'33%',
-            stagger: .03,
-            duration: 0.7,
-            delay: 0,
-        }, 0),
-
-        timeline.fromTo('#select', {
-            width:'60%',
-        }, {
-            width:'33%',
-            stagger: .03,
-            duration: 0.7,
-            delay: 0,
-        }, 0),
-
-        timeline.fromTo('.container-uploadANDrecord-left', {
-            y: '0%',
-            opacity: 1,
-            ease: 'power4.inOut',
-        }, {
-            y: '100%',
-            opacity: 0,
-            stagger: .03,
-            duration: 2.5,
-            delay: 1.5,
-            ease: 'power4.inOut',
-        }, 0),
-
-        timeline.fromTo('.list', {
-            y: '0%',
-            opacity: 0,
-            ease: 'power4.inOut',
-        }, {
-            y: '-250%',
-            opacity: 1,
-            stagger: .03,
-            duration: 2.5,
-            delay: 4,
-            ease: 'power4.inOut',
-        }, 0),
-
-        timeline.play();
-
-    if (true) {
-        // 获取选定的文件
-        var file = songInput.files[0];
-
-        console.log('Selected file:', file.name);
-        console.log('File size:', file.size);
-
-        alert('File uploaded successfully!');
-
-        const timeline = gsap.timeline({
-            onComplete: () => {
-                console.log('目标歌曲上传完成！');
-            },
-            defaults: {
-                ease: 'power4.inOut',
-            },
-        });
-
-        timeline.fromTo('.container-uploadANDrecord-right', {
-            left: '5%',
-            opacity: 1,
-        }, {
-            opacity: 0,
-            left: '100%',
-            stagger: .03,
-            duration: 2.5,
-            delay: -.6,
-        }, 0),
-
-            timeline.fromTo('.player-right', {
-                left: '100%',
-                opacity: 0,
-            }, {
-                opacity: 1,
-                left: '10%',
-                stagger: .03,
-                duration: 2.5,
-                delay: 1.5,
-            }, 0),
-
-            timeline.play();
-    }
-}
 
 
 document.addEventListener('DOMContentLoaded',async (event) => {
@@ -477,37 +284,7 @@ document.addEventListener('DOMContentLoaded',async (event) => {
     uploadButton[0].addEventListener('click', async () => {
         audioFile = await getAudioFile();
         if (audioFile) {
-            const timeline = gsap.timeline({
-                onComplete: () => {
-                    console.log('目标歌曲上传完成！');
-                },
-                defaults: {
-                    ease: 'power4.inOut',
-                },
-            });
-
-            timeline.fromTo('.container-uploadANDrecord-right', {
-                left: '5%',
-                opacity: 1,
-            }, {
-                opacity: 0,
-                left: '100%',
-                stagger: .03,
-                duration: 2.5,
-                delay: -.6,
-            }, 0),
-
-                timeline.fromTo('.player-right', {
-                    left: '100%',
-                    opacity: 0,
-                }, {
-                    opacity: 1,
-                    left: '10%',
-                    stagger: .03,
-                    duration: 2.5,
-                    delay: 1.5,
-                }, 0),
-                timeline.play();
+            uploadAnimation()
         }
         var fileURL = URL.createObjectURL(audioFile);
         uploadMusic.volume = '0.3';
@@ -521,37 +298,7 @@ document.addEventListener('DOMContentLoaded',async (event) => {
         console.log('upload');
         audioFile = await getAudioFile();
         if (audioFile) {
-            const timeline = gsap.timeline({
-                onComplete: () => {
-                    console.log('目标歌曲上传完成！');
-                },
-                defaults: {
-                    ease: 'power4.inOut',
-                },
-            });
-
-            timeline.fromTo('.container-uploadANDrecord-right', {
-                left: '5%',
-                opacity: 1,
-            }, {
-                opacity: 0,
-                left: '100%',
-                stagger: .03,
-                duration: 2.5,
-                delay: -.6,
-            }, 0),
-
-                timeline.fromTo('.player-right', {
-                    left: '100%',
-                    opacity: 0,
-                }, {
-                    opacity: 1,
-                    left: '10%',
-                    stagger: .03,
-                    duration: 2.5,
-                    delay: 1.5,
-                }, 0),
-                timeline.play();
+            uploadAnimation()
         }
         var fileURL = URL.createObjectURL(audioFile);
         uploadMusic.volume = '0.3';
@@ -569,37 +316,7 @@ document.addEventListener('DOMContentLoaded',async (event) => {
     upload.addEventListener('click', async () => {
         audioFile = await getAudioFile();
         if (audioFile) {
-            const timeline = gsap.timeline({
-                onComplete: () => {
-                    console.log('目标歌曲上传完成！');
-                },
-                defaults: {
-                    ease: 'power4.inOut',
-                },
-            });
-
-            timeline.fromTo('.container-uploadANDrecord-right', {
-                left: '5%',
-                opacity: 1,
-            }, {
-                opacity: 0,
-                left: '100%',
-                stagger: .03,
-                duration: 2.5,
-                delay: -.6,
-            }, 0),
-
-                timeline.fromTo('.player-right', {
-                    left: '100%',
-                    opacity: 0,
-                }, {
-                    opacity: 1,
-                    left: '10%',
-                    stagger: .03,
-                    duration: 2.5,
-                    delay: 1.5,
-                }, 0),
-                timeline.play();
+            uploadAnimation()
         }
         var fileURL = URL.createObjectURL(audioFile);
         uploadMusic.volume = '0.3';
@@ -618,37 +335,7 @@ document.addEventListener('DOMContentLoaded',async (event) => {
                 console.log(uploadMusic.duration)
                 uploadMusicTime.innerText = formatSeconds(uploadMusic.currentTime) + '/' + formatSeconds(uploadMusic.duration);
 
-                const timeline = gsap.timeline({
-                    onComplete: () => {
-                        console.log('目标歌曲上传完成！');
-                    },
-                    defaults: {
-                        ease: 'power4.inOut',
-                    },
-                });
-
-                timeline.fromTo('.container-uploadANDrecord-right', {
-                    left: '5%',
-                    opacity: 1,
-                }, {
-                    opacity: 0,
-                    left: '100%',
-                    stagger: .03,
-                    duration: 2.5,
-                    delay: -.6,
-                }, 0),
-
-                    timeline.fromTo('.player-right', {
-                        left: '100%',
-                        opacity: 0,
-                    }, {
-                        opacity: 1,
-                        left: '10%',
-                        stagger: .03,
-                        duration: 2.5,
-                        delay: 1.5,
-                    }, 0),
-                    timeline.play();
+                uploadAnimation()
             }
         });
     })
