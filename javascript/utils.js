@@ -1,6 +1,7 @@
-var btnIsClick = [false];
-var conditionStateBtn=[false];
+var btnIsClick = [false, false];
+var conditionStateBtn=[false, false];
 let audioFile;
+
 
 async function getAudioFile() {
     const pickerOpts={
@@ -96,10 +97,8 @@ function createAudioProgress(audioProgress,audioProgressHead,stateBtn,fastBtn,ba
     audioProgressHead[index].addEventListener('mousedown',(event)=>{
 
         btnIsClick[index]=true;
-        console.log('mousedown ',btnIsClick[0]);
     });
     audioProgress[index].addEventListener('mousemove',(event)=>{
-        console.log('mousedown ',btnIsClick[0]);
         if (btnIsClick[index]) {
             processMove(event,uploadMusic,audioProgress[index],audioProgressHead[index]);
         }
@@ -127,20 +126,20 @@ function formatSeconds(seconds) {
 }
 
 //record 录音按钮 recordPlayer 录音文件 microphone图标
-async function getMedia() {
-    const constraints = {audio: true};
+async function getMedia(mediaRecord) {
+    const downloadLink = document.getElementsByClassName('download-link');
     const record = document.getElementById('record');
-    const recordPlayer = document.getElementById('recordPlayer');
+    const recordPlayer = document.getElementsByClassName('recordPlayer')[0];
     const microphone = document.getElementsByClassName('microphone');
     try {
-        var promise = navigator.mediaDevices.getUserMedia(constraints);
-        var mediaRecord = new MediaRecorder(await promise);
+
         const chunks = [];
         mediaRecord.ondataavailable = function(event) {
             chunks.push(event.data);
             console.log(chunks);
         };
         mediaRecord.onstop =function (event) {
+            console.log(mediaRecord.state);
             getAudioFile = true;
             let nowDate = String(Date.now());
             const blob = new Blob(chunks, {'type': 'audio/ogg; codecs=opus'});
@@ -156,23 +155,26 @@ async function getMedia() {
             })
             recordPlayer.src = window.URL.createObjectURL(blob);
             recordPlayer.style.display = '';
-            console.log(recordPlayer.style.display);
+            downloadLink[0].href = recordPlayer.src;
+            downloadLink[0].download = formData.get('file').name;
+
         };
-        record.onclick = () => {
-            if (mediaRecord.state ==="recording"){
-                mediaRecord.stop();
+        if (mediaRecord.state ==="recording"){
                 microphone[0].style.display = '';
                 microphone[1].style.display = 'none';
+                console.log('222222222222222222');
+                mediaRecord.stop();
+                return true;
+        }
+        else{
+                recordPlayer.style.display = 'none';
+                microphone[0].style.display = 'none';
+                microphone[1].style.display = '';
+                mediaRecord.start();
+                console.log(mediaRecord.state);
+                return false;
             }
-            else{
-                getMedia();
-            }
-        };
-        recordPlayer.style.display = 'none';
-        microphone[0].style.display = 'none';
-        microphone[1].style.display = '';
-        mediaRecord.start();
-        console.log(mediaRecord.state);
+
     } catch (err) {
         console.log(err);
         console.error("授权失败！");
@@ -181,29 +183,30 @@ async function getMedia() {
 }
 //声音转换进度条
 function waitChangeFinish(event){
-    const changeProgressBar = document.getElementById('changeProgressBar');
+    // const conversion = document.getElementById('Conversion');
+    const progressBar = document.getElementById('changeProgressBar').children[0];
+    const computedStyle = document.getComputedStyle(progressBar)
     const changeAudioPlayer = document.getElementById('changeAudioPlayer');
-    const timeProgress = document.getElementById('timeProgress');
+    // const timeProgress = document.getElementById('timeProgress');
     //初始化
     changeAudioPlayer.style.display='none';
-    changeProgressBar.style.display='';
-    changeProgressBar.children[0].style.width='0%';
+    // changeProgressBar.style.display='';
+    // changeProgressBar.children[0].style.width='0%';
 
-    let processBar = 0;
     let oneWaitTime =100;
     let allWaitTime = 0;
     var cleanCT;
-    event.innerHTML +=` <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  转换中...`;
+
     let changePromis = new Promise((resolve, reject)=>{
         //发送转换请求
         fetch('/sendAudioFile', {"method": "POST"}).then(response => {
             if(!response.ok){
                 throw new Error('error');
             }else{
-                processBar = 100;
+
                 clearInterval(cleanCT);
-                changeProgressBar.children[0].style.width=String(processBar)+'%';
+                let width = 100;
+                progressBar.style.setProperty('--width', width);
                 return response.blob();
             }
         }).then(blob =>{
@@ -211,17 +214,17 @@ function waitChangeFinish(event){
             console.log(audioUrl);
             changeAudioPlayer.src= audioUrl;
             resolve('111')
-            event.innerHTML = `转换`;
-            event.disabled = false;
+
         })
 
         cleanCT = setInterval(function() {
             console.log("0.1s");
-            processBar +=1;
             allWaitTime += (oneWaitTime/1000);
-            timeProgress.innerText= String(allWaitTime.toFixed(1))+'s';
-            if(processBar >99) processBar = 99;
-            changeProgressBar.children[0].style.width=String(processBar)+'%';
+            // timeProgress.innerText= String(allWaitTime.toFixed(1))+'s';
+            let width = parseFloat(computedStyle.getPropertyValue('--width'))
+            if( width + 1 > 99) width = 99;
+            progressBar.style.setProperty('--width', width + 1)
+
         }, oneWaitTime);
     })
     changePromis.then((data)=>{
@@ -231,10 +234,10 @@ function waitChangeFinish(event){
     })
 }
 //发送音频和歌曲
-function sendAudioFile(audioFile,recordFile){
+function sendAudioFile(voiceCh,audioFile){
     let formData = new FormData();
     formData.append('audioFile',audioFile,audioFile.filename);
-    formData.append('recordFile',recordFile,recordFile.filename);
+    formData.append('voiceCh',voiceCh);
     fetch('/uploadRecord',{
         method:'POST',
         body: formData
@@ -245,8 +248,202 @@ function sendAudioFile(audioFile,recordFile){
     })
 }
 
+function animalplay(){
+    if (true) {
+        // 获取选定的文件
+        // var file = uploadInput.files[0];
 
-document.addEventListener('DOMContentLoaded',(event) =>{
+        // console.log('Selected file:', file.name);
+        // console.log('File size:', file.size);
+
+        alert('File uploaded successfully!');
+
+        const timeline = gsap.timeline({
+            onComplete: () => {
+                console.log('用户音色上传完成！');
+            },
+            defaults: {
+                ease: 'power4.inOut',
+            },
+        });
+
+        timeline.fromTo('.container-uploadANDrecord-left', {
+            left: 0,
+            opacity: 1,
+        }, {
+            opacity: 0,
+            left: '-100%',
+            stagger: .03,
+            duration: 2.5,
+            delay: -.6,
+        }, 0),
+
+            timeline.fromTo('.player-left', {
+                left: '-100%',
+                opacity: 0,
+            }, {
+                opacity: 1,
+                left: '10%',
+                stagger: .03,
+                duration: 2.5,
+                delay: 1.5,
+            }, 0),
+
+            timeline.play();
+    }
+
+    if (true) {
+        // 获取选定的文件
+        // var file = recordInput.files[0];
+
+        // console.log('Selected file:', file.name);
+        // console.log('File size:', file.size);
+
+        alert('File uploaded successfully!');
+
+        const timeline = gsap.timeline({
+            onComplete: () => {
+                console.log('用户音色上传完成！');
+            },
+            defaults: {
+                ease: 'power4.inOut',
+            },
+        });
+
+        timeline.fromTo('.container-uploadANDrecord-left', {
+            left: 0,
+            opacity: 1,
+        }, {
+            opacity: 0,
+            left: '-100%',
+            stagger: .03,
+            duration: 2.5,
+            delay: -.6,
+        }, 0),
+
+            timeline.fromTo('.player-left', {
+                left: '-100%',
+                opacity: 0,
+            }, {
+                opacity: 1,
+                left: '10%',
+                stagger: .03,
+                duration: 2.5,
+                delay: 1.5,
+            }, 0),
+
+            timeline.play();
+    }
+
+    const timeline = gsap.timeline({
+        onComplete: () => {
+            console.log('用户音色上传完成！');
+        },
+        defaults: {
+            ease: 'none',
+        },
+    });
+    timeline.fromTo('#upload', {
+        width:'20%',
+    }, {
+        width:'33%',
+        stagger: .03,
+        duration: 0.7,
+        delay: 0,
+    }, 0),
+
+        timeline.fromTo('#record', {
+            width:'20%',
+        }, {
+            width:'33%',
+            stagger: .03,
+            duration: 0.7,
+            delay: 0,
+        }, 0),
+
+        timeline.fromTo('#select', {
+            width:'60%',
+        }, {
+            width:'33%',
+            stagger: .03,
+            duration: 0.7,
+            delay: 0,
+        }, 0),
+
+        timeline.fromTo('.container-uploadANDrecord-left', {
+            y: '0%',
+            opacity: 1,
+            ease: 'power4.inOut',
+        }, {
+            y: '100%',
+            opacity: 0,
+            stagger: .03,
+            duration: 2.5,
+            delay: 1.5,
+            ease: 'power4.inOut',
+        }, 0),
+
+        timeline.fromTo('.list', {
+            y: '0%',
+            opacity: 0,
+            ease: 'power4.inOut',
+        }, {
+            y: '-250%',
+            opacity: 1,
+            stagger: .03,
+            duration: 2.5,
+            delay: 4,
+            ease: 'power4.inOut',
+        }, 0),
+
+        timeline.play();
+
+    if (true) {
+        // 获取选定的文件
+        var file = songInput.files[0];
+
+        console.log('Selected file:', file.name);
+        console.log('File size:', file.size);
+
+        alert('File uploaded successfully!');
+
+        const timeline = gsap.timeline({
+            onComplete: () => {
+                console.log('目标歌曲上传完成！');
+            },
+            defaults: {
+                ease: 'power4.inOut',
+            },
+        });
+
+        timeline.fromTo('.container-uploadANDrecord-right', {
+            left: '5%',
+            opacity: 1,
+        }, {
+            opacity: 0,
+            left: '100%',
+            stagger: .03,
+            duration: 2.5,
+            delay: -.6,
+        }, 0),
+
+            timeline.fromTo('.player-right', {
+                left: '100%',
+                opacity: 0,
+            }, {
+                opacity: 1,
+                left: '10%',
+                stagger: .03,
+                duration: 2.5,
+                delay: 1.5,
+            }, 0),
+
+            timeline.play();
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded',async (event) => {
     // const uploadModal = new bootstrap.Modal(document.getElementById('uploadModal'));
     // const uploadModalPage = document.getElementById('uploadModal');
     // const recordModal = new bootstrap.Modal(document.getElementById('recordModal'));
@@ -258,20 +455,28 @@ document.addEventListener('DOMContentLoaded',(event) =>{
     const backBtn = document.getElementsByClassName('prev-btn');
     const fastBtn = document.getElementsByClassName('next-btn');
     const stateBtn = document.getElementsByClassName('play-btn');
-    const uploadMusic = document.getElementById('uploadMusic');
+    const uploadMusic = document.getElementsByClassName('uploadMusic')[0];
     const uploadMusicTime = document.getElementById('uploadMusicTime');
-    const uploadCard = document.getElementById('uploadCard');
+    const changedMusicTime = document.getElementById('changedMusicTime');
+    const recordBtn = document.getElementById('record');
+    const changeAudioPlayer = document.getElementById('changeAudioPlayer');
+    const upload = document.getElementById('upload');
+    const downloadLink = document.getElementsByClassName('download-link');
 
-    createAudioProgress(audioProgress,audioProgressHead,stateBtn,fastBtn,backBtn,uploadMusic,0);
 
-    document.addEventListener('mouseup',(event)=>{
-        btnIsClick[0]=false;
+    var promise = navigator.mediaDevices.getUserMedia({audio: true});
+    var mediaRecord = new MediaRecorder(await promise);
+
+    createAudioProgress(audioProgress, audioProgressHead, stateBtn, fastBtn, backBtn, uploadMusic, 0);
+    createAudioProgress(audioProgress, audioProgressHead, stateBtn, fastBtn, backBtn, changeAudioPlayer, 1);
+
+    document.addEventListener('mouseup', (event) => {
+        btnIsClick[0] = false;
     });
 
-    uploadButton[0].addEventListener('click',async () => {
-        console.log('upload');
+    uploadButton[0].addEventListener('click', async () => {
         audioFile = await getAudioFile();
-        if(audioFile){
+        if (audioFile) {
             const timeline = gsap.timeline({
                 onComplete: () => {
                     console.log('目标歌曲上传完成！');
@@ -306,21 +511,166 @@ document.addEventListener('DOMContentLoaded',(event) =>{
         }
         var fileURL = URL.createObjectURL(audioFile);
         uploadMusic.volume = '0.3';
-        changeAudioProgress(uploadMusic,0,audioProgress[0],audioProgressHead[0],false)
+        changeAudioProgress(uploadMusic, 0, audioProgress[0], audioProgressHead[0], false)
         uploadMusic.src = fileURL;
+        downloadLink[0].href = fileURL;
+        downloadLink[0].download = audioFile.name;
+    });
 
+    uploadButton[1].addEventListener('click', async () => {
+        console.log('upload');
+        audioFile = await getAudioFile();
+        if (audioFile) {
+            const timeline = gsap.timeline({
+                onComplete: () => {
+                    console.log('目标歌曲上传完成！');
+                },
+                defaults: {
+                    ease: 'power4.inOut',
+                },
+            });
+
+            timeline.fromTo('.container-uploadANDrecord-right', {
+                left: '5%',
+                opacity: 1,
+            }, {
+                opacity: 0,
+                left: '100%',
+                stagger: .03,
+                duration: 2.5,
+                delay: -.6,
+            }, 0),
+
+                timeline.fromTo('.player-right', {
+                    left: '100%',
+                    opacity: 0,
+                }, {
+                    opacity: 1,
+                    left: '10%',
+                    stagger: .03,
+                    duration: 2.5,
+                    delay: 1.5,
+                }, 0),
+                timeline.play();
+        }
+        var fileURL = URL.createObjectURL(audioFile);
+        uploadMusic.volume = '0.3';
+        changeAudioProgress(uploadMusic, 0, audioProgress[0], audioProgressHead[0], false)
+        uploadMusic.src = fileURL;
+        changeAudioPlayer.src = fileURL;
+        // ---------------TEST
+        downloadLink[0].href = fileURL;
+        downloadLink[0].download = audioFile.name;
+        downloadLink[1].href = fileURL;
+        downloadLink[1].download = audioFile.name;
+        changedMusicTime.innerText = formatSeconds(changeAudioPlayer.currentTime) + '/' + formatSeconds(changeAudioPlayer.duration);
+    });
+
+    upload.addEventListener('click', async () => {
+        audioFile = await getAudioFile();
+        if (audioFile) {
+            const timeline = gsap.timeline({
+                onComplete: () => {
+                    console.log('目标歌曲上传完成！');
+                },
+                defaults: {
+                    ease: 'power4.inOut',
+                },
+            });
+
+            timeline.fromTo('.container-uploadANDrecord-right', {
+                left: '5%',
+                opacity: 1,
+            }, {
+                opacity: 0,
+                left: '100%',
+                stagger: .03,
+                duration: 2.5,
+                delay: -.6,
+            }, 0),
+
+                timeline.fromTo('.player-right', {
+                    left: '100%',
+                    opacity: 0,
+                }, {
+                    opacity: 1,
+                    left: '10%',
+                    stagger: .03,
+                    duration: 2.5,
+                    delay: 1.5,
+                }, 0),
+                timeline.play();
+        }
+        var fileURL = URL.createObjectURL(audioFile);
+        uploadMusic.volume = '0.3';
+        changeAudioProgress(uploadMusic, 0, audioProgress[0], audioProgressHead[0], false)
+        uploadMusic.src = fileURL;
+        downloadLink[0].href = fileURL;
+        downloadLink[0].download = audioFile.name;
     });
 
 
-    uploadMusic.addEventListener('timeupdate',()=>{
-        var processPercent= uploadMusic.currentTime/uploadMusic.duration*100;
-        changeAudioProgress(uploadMusic,processPercent,audioProgress[0],audioProgressHead[0],false);
-        uploadMusicTime.innerText = formatSeconds(uploadMusic.currentTime)+'/'+formatSeconds(uploadMusic.duration);
-        if(uploadMusic.currentTime === uploadMusic.duration){
+    recordBtn.addEventListener('click', async () => {
+        console.log('click');
+        const isGetRecord = getMedia(mediaRecord).then(result => {
+            console.log(result)
+            if(result){
+                console.log(uploadMusic.duration)
+                uploadMusicTime.innerText = formatSeconds(uploadMusic.currentTime) + '/' + formatSeconds(uploadMusic.duration);
+
+                const timeline = gsap.timeline({
+                    onComplete: () => {
+                        console.log('目标歌曲上传完成！');
+                    },
+                    defaults: {
+                        ease: 'power4.inOut',
+                    },
+                });
+
+                timeline.fromTo('.container-uploadANDrecord-right', {
+                    left: '5%',
+                    opacity: 1,
+                }, {
+                    opacity: 0,
+                    left: '100%',
+                    stagger: .03,
+                    duration: 2.5,
+                    delay: -.6,
+                }, 0),
+
+                    timeline.fromTo('.player-right', {
+                        left: '100%',
+                        opacity: 0,
+                    }, {
+                        opacity: 1,
+                        left: '10%',
+                        stagger: .03,
+                        duration: 2.5,
+                        delay: 1.5,
+                    }, 0),
+                    timeline.play();
+            }
+        });
+    })
+
+    uploadMusic.addEventListener('timeupdate', () => {
+        var processPercent = uploadMusic.currentTime / uploadMusic.duration * 100;
+        changeAudioProgress(uploadMusic, processPercent, audioProgress[0], audioProgressHead[0], false);
+        uploadMusicTime.innerText = formatSeconds(uploadMusic.currentTime) + '/' + formatSeconds(uploadMusic.duration);
+        if (uploadMusic.currentTime === uploadMusic.duration) {
             uploadMusic.pause();
-            conditionStateBtn[0] = false;
-            stateBtn[0].children[0].style.display = '';
-            stateBtn[0].children[1].style.display = 'none';
+
+            changeAudioState(uploadMusic,stateBtn[0],0);
+        }
+    })
+
+    changeAudioPlayer.addEventListener('timeupdate', () => {
+        var processPercent = changeAudioPlayer.currentTime / changeAudioPlayer.duration * 100;
+        changeAudioProgress(changeAudioPlayer, processPercent, audioProgress[1], audioProgressHead[1], false);
+        changedMusicTime.innerText = formatSeconds(changeAudioPlayer.currentTime) + '/' + formatSeconds(changeAudioPlayer.duration);
+        if (changeAudioPlayer.currentTime === changeAudioPlayer.duration) {
+            changeAudioPlayer.pause();
+            changeAudioState(uploadMusic,stateBtn[1],1);
         }
     })
 });

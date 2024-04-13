@@ -15,100 +15,100 @@ document.addEventListener("DOMContentLoaded", function() {
     var selectSong = document.getElementById('select-storedSongs');
 
    
-    uploadInput.addEventListener('click', function() {
-        console.log('changed')
-        // 检查是否有选定文件
-        if (true) {
-            // 获取选定的文件
-            // var file = uploadInput.files[0];
+    // uploadInput.addEventListener('click', function() {
+    //     console.log('changed')
+    //     // 检查是否有选定文件
+    //     if (true) {
+    //         // 获取选定的文件
+    //         // var file = uploadInput.files[0];
+    //
+    //         // console.log('Selected file:', file.name);
+    //         // console.log('File size:', file.size);
+    //
+    //         alert('File uploaded successfully!');
+    //
+    //         const timeline = gsap.timeline({
+    //             onComplete: () => {
+    //               console.log('用户音色上传完成！');
+    //             },
+    //             defaults: {
+    //               ease: 'power4.inOut',
+    //             },
+    //           });
+    //
+    //           timeline.fromTo('.container-uploadANDrecord-left', {
+    //             left: 0,
+    //             opacity: 1,
+    //           }, {
+    //             opacity: 0,
+    //             left: '-100%',
+    //             stagger: .03,
+    //             duration: 2.5,
+    //             delay: -.6,
+    //           }, 0),
+    //
+    //           timeline.fromTo('.player-left', {
+    //             left: '-100%',
+    //             opacity: 0,
+    //           }, {
+    //             opacity: 1,
+    //             left: '10%',
+    //             stagger: .03,
+    //             duration: 2.5,
+    //             delay: 1.5,
+    //           }, 0),
+    //
+    //           timeline.play();
+    //     }
+    // });
 
-            // console.log('Selected file:', file.name);
-            // console.log('File size:', file.size);
-
-            alert('File uploaded successfully!');
-
-            const timeline = gsap.timeline({
-                onComplete: () => {
-                  console.log('用户音色上传完成！');
-                },
-                defaults: {
-                  ease: 'power4.inOut', 
-                },
-              });
-
-              timeline.fromTo('.container-uploadANDrecord-left', {
-                left: 0,
-                opacity: 1,
-              }, {
-                opacity: 0,
-                left: '-100%',
-                stagger: .03,
-                duration: 2.5,
-                delay: -.6,
-              }, 0),
-
-              timeline.fromTo('.player-left', {
-                left: '-100%',
-                opacity: 0,
-              }, {
-                opacity: 1,
-                left: '10%',
-                stagger: .03,
-                duration: 2.5,
-                delay: 1.5,
-              }, 0),
-
-              timeline.play();
-        }
-    });
-
-    recordInput.addEventListener('click', function() {
-        console.log('changed')
-        // 检查是否有选定文件
-        // recordInput.files.length > 0
-        if (true) {
-            // 获取选定的文件
-            // var file = recordInput.files[0];
-
-            // console.log('Selected file:', file.name);
-            // console.log('File size:', file.size);
-
-            alert('File uploaded successfully!');
-
-            const timeline = gsap.timeline({
-                onComplete: () => {
-                  console.log('用户音色上传完成！');
-                },
-                defaults: {
-                  ease: 'power4.inOut', 
-                },
-              });
-
-              timeline.fromTo('.container-uploadANDrecord-left', {
-                left: 0,
-                opacity: 1,
-              }, {
-                opacity: 0,
-                left: '-100%',
-                stagger: .03,
-                duration: 2.5,
-                delay: -.6,
-              }, 0),
-
-              timeline.fromTo('.player-left', {
-                left: '-100%',
-                opacity: 0,
-              }, {
-                opacity: 1,
-                left: '10%',
-                stagger: .03,
-                duration: 2.5,
-                delay: 1.5,
-              }, 0),
-
-              timeline.play();
-        }
-    });
+    // recordInput.addEventListener('click', function() {
+    //     console.log('changed')
+    //     // 检查是否有选定文件
+    //     // recordInput.files.length > 0
+    //     if (true) {
+    //         // 获取选定的文件
+    //         // var file = recordInput.files[0];
+    //
+    //         // console.log('Selected file:', file.name);
+    //         // console.log('File size:', file.size);
+    //
+    //         alert('File uploaded successfully!');
+    //
+    //         const timeline = gsap.timeline({
+    //             onComplete: () => {
+    //               console.log('用户音色上传完成！');
+    //             },
+    //             defaults: {
+    //               ease: 'power4.inOut',
+    //             },
+    //           });
+    //
+    //           timeline.fromTo('.container-uploadANDrecord-left', {
+    //             left: 0,
+    //             opacity: 1,
+    //           }, {
+    //             opacity: 0,
+    //             left: '-100%',
+    //             stagger: .03,
+    //             duration: 2.5,
+    //             delay: -.6,
+    //           }, 0),
+    //
+    //           timeline.fromTo('.player-left', {
+    //             left: '-100%',
+    //             opacity: 0,
+    //           }, {
+    //             opacity: 1,
+    //             left: '10%',
+    //             stagger: .03,
+    //             duration: 2.5,
+    //             delay: 1.5,
+    //           }, 0),
+    //
+    //           timeline.play();
+    //     }
+    // });
 
     selectSinger.addEventListener('click',function(){
       var brand = document.getElementById('brand_select');
@@ -225,51 +225,51 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    selectSong.addEventListener('click', function() {
-        // 检查是否有选定文件
-        if (true) {
-            // // 获取选定的文件
-            // var file = selectInput.files[0];
-
-            // console.log('Selected file:', file.name);
-            // console.log('File size:', file.size);
-
-            // alert('File uploaded successfully!');
-
-            const timeline = gsap.timeline({
-                onComplete: () => {
-                  console.log('目标歌曲上传完成！');
-                },
-                defaults: {
-                  ease: 'power4.inOut', 
-                },
-              });
-
-              timeline.fromTo('.container-uploadANDrecord-right', {
-                left: '5%',
-                opacity: 1,
-              }, {
-                opacity: 0,
-                left: '100%',
-                stagger: .03,
-                duration: 2.5,
-                delay: -.6,
-              }, 0),
-
-              timeline.fromTo('.player-right', {
-                left: '100%',
-                opacity: 0,
-              }, {
-                opacity: 1,
-                left: '10%',
-                stagger: .03,
-                duration: 2.5,
-                delay: 1.5,
-              }, 0),
-
-              timeline.play();
-        }
-    });
+    // selectSong.addEventListener('click', function() {
+    //     // 检查是否有选定文件
+    //     if (true) {
+    //         // // 获取选定的文件
+    //         // var file = selectInput.files[0];
+    //
+    //         // console.log('Selected file:', file.name);
+    //         // console.log('File size:', file.size);
+    //
+    //         // alert('File uploaded successfully!');
+    //
+    //         const timeline = gsap.timeline({
+    //             onComplete: () => {
+    //               console.log('目标歌曲上传完成！');
+    //             },
+    //             defaults: {
+    //               ease: 'power4.inOut',
+    //             },
+    //           });
+    //
+    //           timeline.fromTo('.container-uploadANDrecord-right', {
+    //             left: '5%',
+    //             opacity: 1,
+    //           }, {
+    //             opacity: 0,
+    //             left: '100%',
+    //             stagger: .03,
+    //             duration: 2.5,
+    //             delay: -.6,
+    //           }, 0),
+    //
+    //           timeline.fromTo('.player-right', {
+    //             left: '100%',
+    //             opacity: 0,
+    //           }, {
+    //             opacity: 1,
+    //             left: '10%',
+    //             stagger: .03,
+    //             duration: 2.5,
+    //             delay: 1.5,
+    //           }, 0),
+    //
+    //           timeline.play();
+    //     }
+    // });
 
     // // 监听上传模块的点击事件
     // uploadModule_l.addEventListener('click', function() {
